@@ -1,0 +1,44 @@
+# BasicQuestionFlow
+
+main: kit: flow: BasicQuestionFlow:
+{
+  entity: "question",
+  kind: "basic",
+  name: "BasicQuestionFlow",
+  step: [
+    {
+      op: "list",
+      valid: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "question_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      input: {
+        ref: "question_ref01",
+        srcdatavar: "question_ref01_data",
+        suffix: "_dt0"
+      }
+
+      match: {
+        id: "question01"
+      }
+
+      op: "load",
+      valid: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-question_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicQuestionFlow"
+}

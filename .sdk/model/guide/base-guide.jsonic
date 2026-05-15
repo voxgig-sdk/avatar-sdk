@@ -1,0 +1,36 @@
+# Guide
+
+guide: {
+  metrics: count: entity: 3
+  metrics: count: path: 6
+  metrics: count: method: 6
+
+  entity: character: {
+    path: "/characters": {
+      op: list: method: *GET
+    }
+    path: "/characters/{id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: episode: {
+    path: "/episodes": {
+      op: list: method: *GET
+    }
+    path: "/episodes/{id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: question: {
+    path: "/questions": {
+      op: list: method: *GET
+    }
+    path: "/questions/{id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.question`")|top
+    }
+  }
+
+}

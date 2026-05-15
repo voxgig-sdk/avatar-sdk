@@ -1,0 +1,24 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "Sample APIs"
+        url: "https://sampleapis.com"
+      }
+      description: "If you are an Avatar fan, then this api is for you. Here you can find everything from Episodes to Characters to Trivia Questions and more."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://api.sampleapis.com/avatar"
+        }
+      ]
+      title: "Avatar"
+      version: "1.0.0"
+    }
+  }
+}
+
+}

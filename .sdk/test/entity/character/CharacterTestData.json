@@ -1,0 +1,45 @@
+{
+  "existing": {
+    "character": {
+      "CHARACTER00": {
+        "affiliation": "s46",
+        "ally": [],
+        "enemy": [],
+        "id": "CHARACTER00",
+        "name": "s4a",
+        "photo_url": "s4b",
+        "position": "s4c"
+      },
+      "CHARACTER01": {
+        "affiliation": "s8c",
+        "ally": [],
+        "enemy": [],
+        "id": "CHARACTER01",
+        "name": "s90",
+        "photo_url": "s91",
+        "position": "s92"
+      },
+      "CHARACTER02": {
+        "affiliation": "sd2",
+        "ally": [],
+        "enemy": [],
+        "id": "CHARACTER02",
+        "name": "sd6",
+        "photo_url": "sd7",
+        "position": "sd8"
+      }
+    }
+  },
+  "new": {
+    "character": {
+      "character_ref01": {
+        "affiliation": "s118",
+        "ally": [],
+        "enemy": [],
+        "name": "s11c",
+        "photo_url": "s11d",
+        "position": "s11e"
+      }
+    }
+  }
+}

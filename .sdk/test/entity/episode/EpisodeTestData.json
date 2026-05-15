@@ -1,0 +1,45 @@
+{
+  "existing": {
+    "episode": {
+      "EPISODE00": {
+        "air_date": "s46",
+        "director": "s47",
+        "episode_num": "s48",
+        "id": "EPISODE00",
+        "season": "s4a",
+        "title": "s4b",
+        "writer": "s4c"
+      },
+      "EPISODE01": {
+        "air_date": "s8c",
+        "director": "s8d",
+        "episode_num": "s8e",
+        "id": "EPISODE01",
+        "season": "s90",
+        "title": "s91",
+        "writer": "s92"
+      },
+      "EPISODE02": {
+        "air_date": "sd2",
+        "director": "sd3",
+        "episode_num": "sd4",
+        "id": "EPISODE02",
+        "season": "sd6",
+        "title": "sd7",
+        "writer": "sd8"
+      }
+    }
+  },
+  "new": {
+    "episode": {
+      "episode_ref01": {
+        "air_date": "s118",
+        "director": "s119",
+        "episode_num": "s11a",
+        "season": "s11c",
+        "title": "s11d",
+        "writer": "s11e"
+      }
+    }
+  }
+}

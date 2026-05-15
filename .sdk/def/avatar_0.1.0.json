@@ -1,0 +1,333 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Avatar",
+    "description": "If you are an Avatar fan, then this api is for you. Here you can find everything from Episodes to Characters to Trivia Questions and more.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Sample APIs",
+      "url": "https://sampleapis.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.sampleapis.com/avatar",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/characters": {
+      "get": {
+        "summary": "Get all Avatar characters",
+        "description": "Returns a list of all characters from Avatar: The Last Airbender",
+        "operationId": "getCharacters",
+        "tags": [
+          "Characters"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with list of characters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Character"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/characters/{id}": {
+      "get": {
+        "summary": "Get character by ID",
+        "description": "Returns a single character by their unique identifier",
+        "operationId": "getCharacterById",
+        "tags": [
+          "Characters"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The unique identifier of the character",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with character details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Character"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Character not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/episodes": {
+      "get": {
+        "summary": "Get all Avatar episodes",
+        "description": "Returns a list of all episodes from Avatar: The Last Airbender",
+        "operationId": "getEpisodes",
+        "tags": [
+          "Episodes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with list of episodes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Episode"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/episodes/{id}": {
+      "get": {
+        "summary": "Get episode by ID",
+        "description": "Returns a single episode by its unique identifier",
+        "operationId": "getEpisodeById",
+        "tags": [
+          "Episodes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The unique identifier of the episode",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with episode details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Episode"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Episode not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/questions": {
+      "get": {
+        "summary": "Get all trivia questions",
+        "description": "Returns a list of all Avatar trivia questions",
+        "operationId": "getTriviaQuestions",
+        "tags": [
+          "Trivia"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with list of trivia questions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Question"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/questions/{id}": {
+      "get": {
+        "summary": "Get trivia question by ID",
+        "description": "Returns a single trivia question by its unique identifier",
+        "operationId": "getTriviaQuestionById",
+        "tags": [
+          "Trivia"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The unique identifier of the trivia question",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with trivia question details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Question"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Question not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Character": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the character"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the character"
+          },
+          "affiliation": {
+            "type": "string",
+            "description": "The character's affiliation or nation"
+          },
+          "photoUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL to the character's photo"
+          },
+          "position": {
+            "type": "string",
+            "description": "The character's role or position"
+          },
+          "allies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of the character's allies"
+          },
+          "enemies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of the character's enemies"
+          }
+        }
+      },
+      "Episode": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the episode"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the episode"
+          },
+          "episodeNum": {
+            "type": "integer",
+            "description": "Episode number"
+          },
+          "season": {
+            "type": "integer",
+            "description": "Season number"
+          },
+          "director": {
+            "type": "string",
+            "description": "Director of the episode"
+          },
+          "writer": {
+            "type": "string",
+            "description": "Writer of the episode"
+          },
+          "airDate": {
+            "type": "string",
+            "description": "Original air date of the episode"
+          }
+        }
+      },
+      "Question": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the trivia question"
+          },
+          "question": {
+            "type": "string",
+            "description": "The trivia question text"
+          },
+          "answer": {
+            "type": "string",
+            "description": "The correct answer to the trivia question"
+          },
+          "difficulty": {
+            "type": "string",
+            "description": "Difficulty level of the question"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Characters",
+      "description": "Operations related to Avatar characters"
+    },
+    {
+      "name": "Episodes",
+      "description": "Operations related to Avatar episodes"
+    },
+    {
+      "name": "Trivia",
+      "description": "Operations related to Avatar trivia questions"
+    }
+  ]
+}
