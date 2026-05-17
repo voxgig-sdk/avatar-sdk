@@ -3,7 +3,7 @@ package sdktest
 import (
 	"testing"
 
-	sdk "github.com/voxgig-sdk/avatar-sdk"
+	sdk "github.com/voxgig-sdk/avatar-sdk/go"
 )
 
 func TestCustomUtility(t *testing.T) {

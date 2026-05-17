@@ -1,7 +1,7 @@
 package feature
 
 import (
-	"github.com/voxgig-sdk/avatar-sdk/core"
+	"github.com/voxgig-sdk/avatar-sdk/go/core"
 )
 
 type BaseFeature struct {

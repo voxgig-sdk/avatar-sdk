@@ -1,10 +1,10 @@
 package voxgigavatarsdk
 
 import (
-	"github.com/voxgig-sdk/avatar-sdk/core"
-	"github.com/voxgig-sdk/avatar-sdk/entity"
-	"github.com/voxgig-sdk/avatar-sdk/feature"
-	_ "github.com/voxgig-sdk/avatar-sdk/utility"
+	"github.com/voxgig-sdk/avatar-sdk/go/core"
+	"github.com/voxgig-sdk/avatar-sdk/go/entity"
+	"github.com/voxgig-sdk/avatar-sdk/go/feature"
+	_ "github.com/voxgig-sdk/avatar-sdk/go/utility"
 )
 
 // Type aliases preserve external API.
