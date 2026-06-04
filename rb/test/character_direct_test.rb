@@ -116,14 +116,12 @@ def character_direct_setup(mockres)
   env = Runner.env_override({
     "AVATAR_TEST_CHARACTER_ENTID" => {},
     "AVATAR_TEST_LIVE" => "FALSE",
-    "AVATAR_APIKEY" => "NONE",
   })
 
   live = env["AVATAR_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {
-      "apikey" => env["AVATAR_APIKEY"],
     }
     client = AvatarSDK.new(merged_opts)
     return {

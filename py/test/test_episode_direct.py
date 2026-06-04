@@ -109,14 +109,12 @@ def _episode_direct_setup(mockres):
     env = runner.env_override({
         "AVATAR_TEST_EPISODE_ENTID": {},
         "AVATAR_TEST_LIVE": "FALSE",
-        "AVATAR_APIKEY": "NONE",
     })
 
     live = env.get("AVATAR_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
-            "apikey": env.get("AVATAR_APIKEY"),
         }
         client = AvatarSDK(merged_opts)
         return {

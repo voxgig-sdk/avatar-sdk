@@ -96,7 +96,6 @@ function character_basic_setup($extra)
         "AVATAR_TEST_CHARACTER_ENTID" => $idmap,
         "AVATAR_TEST_LIVE" => "FALSE",
         "AVATAR_TEST_EXPLAIN" => "FALSE",
-        "AVATAR_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -108,7 +107,6 @@ function character_basic_setup($extra)
     if ($env["AVATAR_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["AVATAR_APIKEY"],
             ],
             $extra ?? [],
         ]);

@@ -194,14 +194,12 @@ func episodeDirectSetup(mockres any) *episodeDirectSetupResult {
 	env := envOverride(map[string]any{
 		"AVATAR_TEST_EPISODE_ENTID": map[string]any{},
 		"AVATAR_TEST_LIVE":    "FALSE",
-		"AVATAR_APIKEY":       "NONE",
 	})
 
 	live := env["AVATAR_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
-			"apikey": env["AVATAR_APIKEY"],
 		}
 		client := sdk.NewAvatarSDK(mergedOpts)
 
