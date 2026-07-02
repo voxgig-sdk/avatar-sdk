@@ -17,29 +17,7 @@ main: {
       ]
       title: "Avatar"
       version: "1.0.0"
-      tagline: "Browse characters, episodes, and trivia from Avatar: The Last Airbender and The Legend of Korra"
-      homepage: "https://sampleapis.com/api-list/avatar"
-      docs_url: "https://sampleapis.com/api-list/avatar"
-      license_short: "No licence stated; treat as sample/fan data for non-commercial use."
-      license_md: `- The hosting service ([Sample APIs](https://sampleapis.com)) does not publish an explicit licence for this dataset.
-- Content references Avatar: The Last Airbender and The Legend of Korra, which are trademarks of their respective rights holders — use the data for learning, demos, and fan projects rather than commercial republishing.
-- No API key or authentication is required; CORS is enabled.`
-      about_md: `This SDK wraps the Avatar dataset hosted on [Sample APIs](https://sampleapis.com), a free hub that publishes static JSON endpoints for prototyping and demos. The dataset covers the animated series *Avatar: The Last Airbender* (and related *Legend of Korra* characters) and is catalogued on [Free Public APIs](https://freepublicapis.com/avatar).
-
-What you get from the API:
-
-- A list of show characters (Aang, Katara, Sokka, Toph, Zuko, Iroh, Azula, Appa, Momo, and more) with biographical details.
-- Episode entries from the series.
-- General information about the show / film.
-- Trivia-style questions related to the Avatar universe.
-
-The service is open: no API key, no rate-limit headers documented, and CORS is enabled on all endpoints, which makes it well suited to browser demos and tutorials.`
-      entity_desc: {
-        character: "A person, animal, or spirit from the Avatar universe, served from `https://api.sampleapis.com/avatar/characters`."
-        episode: "An entry describing an episode of the animated series, served from `https://api.sampleapis.com/avatar/episodes`."
-        question: "A trivia question about the Avatar universe, intended for quiz-style apps."
-      }
-      auth: false
     }
   }
 }
+

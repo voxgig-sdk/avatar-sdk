@@ -102,6 +102,7 @@ def _question_basic_setup(extra):
         "AVATAR_TEST_QUESTION_ENTID": idmap,
         "AVATAR_TEST_LIVE": "FALSE",
         "AVATAR_TEST_EXPLAIN": "FALSE",
+        "AVATAR_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -112,6 +113,7 @@ def _question_basic_setup(extra):
     if env.get("AVATAR_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
+                "apikey": env.get("AVATAR_APIKEY"),
             },
             extra or {},
         ])

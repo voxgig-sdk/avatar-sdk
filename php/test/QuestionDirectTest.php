@@ -123,12 +123,14 @@ function question_direct_setup($mockres)
     $env = Runner::env_override([
         "AVATAR_TEST_QUESTION_ENTID" => [],
         "AVATAR_TEST_LIVE" => "FALSE",
+        "AVATAR_APIKEY" => "NONE",
     ]);
 
     $live = $env["AVATAR_TEST_LIVE"] === "TRUE";
 
     if ($live) {
         $merged_opts = [
+            "apikey" => $env["AVATAR_APIKEY"],
         ];
         $client = new AvatarSDK($merged_opts);
         return [

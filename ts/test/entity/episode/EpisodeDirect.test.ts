@@ -136,12 +136,14 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'AVATAR_TEST_EPISODE_ENTID': {},
     'AVATAR_TEST_LIVE': 'FALSE',
+    'AVATAR_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.AVATAR_TEST_LIVE
 
   if (live) {
     const client = new AvatarSDK({
+      apikey: env.AVATAR_APIKEY,
     })
 
     let idmap: any = env['AVATAR_TEST_EPISODE_ENTID']
