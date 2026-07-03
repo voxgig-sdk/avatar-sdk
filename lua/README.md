@@ -10,7 +10,7 @@ The Lua SDK for the Avatar API — an entity-oriented client using Lua conventio
 
 ## Install
 ```bash
-luarocks install avatar-sdk
+luarocks install voxgig-sdk-avatar
 ```
 
 If the module is not yet published, add the source directory to

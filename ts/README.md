@@ -10,7 +10,7 @@ The TypeScript SDK for the Avatar API — a type-safe, entity-oriented client wi
 
 ## Install
 ```bash
-npm install avatar
+npm install @voxgig-sdk/avatar
 ```
 ## Tutorial: your first API call
 

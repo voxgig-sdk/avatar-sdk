@@ -10,7 +10,7 @@ The Python SDK for the Avatar API — an entity-oriented client following Python
 
 ## Install
 ```bash
-pip install avatar-sdk
+pip install voxgig-sdk-avatar
 ```
 
 Or install from source:

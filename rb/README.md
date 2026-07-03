@@ -10,13 +10,13 @@ The Ruby SDK for the Avatar API — an entity-oriented client using idiomatic Ru
 
 ## Install
 ```bash
-gem install avatar-sdk
+gem install voxgig-sdk-avatar
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "avatar-sdk"
+gem "voxgig-sdk-avatar"
 ```
 
 Then run:
