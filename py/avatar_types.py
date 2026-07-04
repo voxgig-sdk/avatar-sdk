@@ -4,84 +4,79 @@
 # params (op.<name>.points[].args.params[]). Field/param types come from the
 # canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
 # @voxgig/apidef VALID_CANON). Do not edit by hand.
+#
+# These are TypedDicts, not dataclasses: the SDK ops return/accept plain dicts
+# at runtime, and a TypedDict IS a dict shape, so the types match the runtime.
+# Optional (req:false) keys are modelled as TypedDict key-optionality
+# (total=False), split into a required base + total=False subclass when a type
+# has both required and optional keys.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Optional, Any
+from typing import TypedDict, Any
 
 
-@dataclass
-class Character:
-    affiliation: Optional[str] = None
-    ally: Optional[list] = None
-    enemy: Optional[list] = None
-    id: Optional[int] = None
-    name: Optional[str] = None
-    photo_url: Optional[str] = None
-    position: Optional[str] = None
+class Character(TypedDict, total=False):
+    affiliation: str
+    ally: list
+    enemy: list
+    id: int
+    name: str
+    photo_url: str
+    position: str
 
 
-@dataclass
-class CharacterLoadMatch:
+class CharacterLoadMatch(TypedDict):
     id: int
 
 
-@dataclass
-class CharacterListMatch:
-    affiliation: Optional[str] = None
-    ally: Optional[list] = None
-    enemy: Optional[list] = None
-    id: Optional[int] = None
-    name: Optional[str] = None
-    photo_url: Optional[str] = None
-    position: Optional[str] = None
+class CharacterListMatch(TypedDict, total=False):
+    affiliation: str
+    ally: list
+    enemy: list
+    id: int
+    name: str
+    photo_url: str
+    position: str
 
 
-@dataclass
-class Episode:
-    air_date: Optional[str] = None
-    director: Optional[str] = None
-    episode_num: Optional[int] = None
-    id: Optional[int] = None
-    season: Optional[int] = None
-    title: Optional[str] = None
-    writer: Optional[str] = None
+class Episode(TypedDict, total=False):
+    air_date: str
+    director: str
+    episode_num: int
+    id: int
+    season: int
+    title: str
+    writer: str
 
 
-@dataclass
-class EpisodeLoadMatch:
+class EpisodeLoadMatch(TypedDict):
     id: int
 
 
-@dataclass
-class EpisodeListMatch:
-    air_date: Optional[str] = None
-    director: Optional[str] = None
-    episode_num: Optional[int] = None
-    id: Optional[int] = None
-    season: Optional[int] = None
-    title: Optional[str] = None
-    writer: Optional[str] = None
+class EpisodeListMatch(TypedDict, total=False):
+    air_date: str
+    director: str
+    episode_num: int
+    id: int
+    season: int
+    title: str
+    writer: str
 
 
-@dataclass
-class Question:
-    answer: Optional[str] = None
-    difficulty: Optional[str] = None
-    id: Optional[int] = None
-    question: Optional[str] = None
+class Question(TypedDict, total=False):
+    answer: str
+    difficulty: str
+    id: int
+    question: str
 
 
-@dataclass
-class QuestionLoadMatch:
+class QuestionLoadMatch(TypedDict):
     id: int
 
 
-@dataclass
-class QuestionListMatch:
-    answer: Optional[str] = None
-    difficulty: Optional[str] = None
-    id: Optional[int] = None
-    question: Optional[str] = None
-
+class QuestionListMatch(TypedDict, total=False):
+    answer: str
+    difficulty: str
+    id: int
+    question: str

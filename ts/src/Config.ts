@@ -385,7 +385,7 @@ class Config {
               },
               "transform": {
                 "req": "`reqdata`",
-                "res": "`body.question`"
+                "res": "`body`"
               },
               "index$": 0
             }

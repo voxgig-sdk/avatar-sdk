@@ -206,42 +206,21 @@ class AvatarSDK {
 
 
 
-  _character?: CharacterEntity
-
-  // Idiomatic facade: `client.character.list()` / `client.character.load({ id })`.
-  get character(): CharacterEntity {
-    return (this._character ??= new CharacterEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.character` instead. */
+  // Entity access: `client.Character().list()` / `client.Character().load({ id })`.
   Character(data?: any) {
     const self = this
     return new CharacterEntity(self,data)
   }
 
 
-  _episode?: EpisodeEntity
-
-  // Idiomatic facade: `client.episode.list()` / `client.episode.load({ id })`.
-  get episode(): EpisodeEntity {
-    return (this._episode ??= new EpisodeEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.episode` instead. */
+  // Entity access: `client.Episode().list()` / `client.Episode().load({ id })`.
   Episode(data?: any) {
     const self = this
     return new EpisodeEntity(self,data)
   }
 
 
-  _question?: QuestionEntity
-
-  // Idiomatic facade: `client.question.list()` / `client.question.load({ id })`.
-  get question(): QuestionEntity {
-    return (this._question ??= new QuestionEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.question` instead. */
+  // Entity access: `client.Question().list()` / `client.Question().load({ id })`.
   Question(data?: any) {
     const self = this
     return new QuestionEntity(self,data)

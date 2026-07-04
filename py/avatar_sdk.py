@@ -220,57 +220,27 @@ class AvatarSDK:
         }
 
 
-    @property
-    def character(self):
-        """Idiomatic facade: client.character.list() / client.character.load({"id": ...})."""
-        from entity.character_entity import CharacterEntity
-        cached = getattr(self, "_character", None)
-        if cached is None:
-            cached = CharacterEntity(self, None)
-            self._character = cached
-        return cached
-
-    def Character(self, data=None):
-        # Deprecated: use client.character instead.
+    def Character(self, data=None) -> "CharacterEntity":
+        """Entity factory: client.Character().list({}) / client.Character().load({"id": ...})."""
         from entity.character_entity import CharacterEntity
         return CharacterEntity(self, data)
 
 
-    @property
-    def episode(self):
-        """Idiomatic facade: client.episode.list() / client.episode.load({"id": ...})."""
-        from entity.episode_entity import EpisodeEntity
-        cached = getattr(self, "_episode", None)
-        if cached is None:
-            cached = EpisodeEntity(self, None)
-            self._episode = cached
-        return cached
-
-    def Episode(self, data=None):
-        # Deprecated: use client.episode instead.
+    def Episode(self, data=None) -> "EpisodeEntity":
+        """Entity factory: client.Episode().list({}) / client.Episode().load({"id": ...})."""
         from entity.episode_entity import EpisodeEntity
         return EpisodeEntity(self, data)
 
 
-    @property
-    def question(self):
-        """Idiomatic facade: client.question.list() / client.question.load({"id": ...})."""
-        from entity.question_entity import QuestionEntity
-        cached = getattr(self, "_question", None)
-        if cached is None:
-            cached = QuestionEntity(self, None)
-            self._question = cached
-        return cached
-
-    def Question(self, data=None):
-        # Deprecated: use client.question instead.
+    def Question(self, data=None) -> "QuestionEntity":
+        """Entity factory: client.Question().list({}) / client.Question().load({"id": ...})."""
         from entity.question_entity import QuestionEntity
         return QuestionEntity(self, data)
 
 
 
     @classmethod
-    def test(cls, testopts=None, sdkopts=None):
+    def test(cls, testopts=None, sdkopts=None) -> "AvatarSDK":
         if sdkopts is None:
             sdkopts = {}
         sdkopts = vs.clone(sdkopts)
@@ -290,3 +260,11 @@ class AvatarSDK:
         sdk.mode = "test"
 
         return sdk
+
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from entity.character_entity import CharacterEntity
+    from entity.episode_entity import EpisodeEntity
+    from entity.question_entity import QuestionEntity

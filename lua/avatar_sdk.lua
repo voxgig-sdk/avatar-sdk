@@ -244,8 +244,9 @@ end
 
 
 
--- Idiomatic facade: client:character():list() / client:character():load({ id = ... })
-function AvatarSDK:character(data)
+-- Idiomatic facade: client:Character():list() / client:Character():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function AvatarSDK:Character(data)
   local EntityMod = require("entity.character_entity")
   if data == nil then
     if self._character == nil then
@@ -256,15 +257,10 @@ function AvatarSDK:character(data)
   return EntityMod.new(self, data)
 end
 
--- Deprecated: use client:character() instead.
-function AvatarSDK:Character(data)
-  local EntityMod = require("entity.character_entity")
-  return EntityMod.new(self, data)
-end
 
-
--- Idiomatic facade: client:episode():list() / client:episode():load({ id = ... })
-function AvatarSDK:episode(data)
+-- Idiomatic facade: client:Episode():list() / client:Episode():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function AvatarSDK:Episode(data)
   local EntityMod = require("entity.episode_entity")
   if data == nil then
     if self._episode == nil then
@@ -275,15 +271,10 @@ function AvatarSDK:episode(data)
   return EntityMod.new(self, data)
 end
 
--- Deprecated: use client:episode() instead.
-function AvatarSDK:Episode(data)
-  local EntityMod = require("entity.episode_entity")
-  return EntityMod.new(self, data)
-end
 
-
--- Idiomatic facade: client:question():list() / client:question():load({ id = ... })
-function AvatarSDK:question(data)
+-- Idiomatic facade: client:Question():list() / client:Question():load({ id = ... })
+-- Entity access is capitalised (PascalCase) for parity with the other SDKs.
+function AvatarSDK:Question(data)
   local EntityMod = require("entity.question_entity")
   if data == nil then
     if self._question == nil then
@@ -291,12 +282,6 @@ function AvatarSDK:question(data)
     end
     return self._question
   end
-  return EntityMod.new(self, data)
-end
-
--- Deprecated: use client:question() instead.
-function AvatarSDK:Question(data)
-  local EntityMod = require("entity.question_entity")
   return EntityMod.new(self, data)
 end
 

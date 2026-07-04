@@ -91,7 +91,7 @@ same parameters as `direct()`.
 ## CharacterEntity
 
 ```lua
-local character = client:character(nil)
+local character = client:Character(nil)
 ```
 
 ### Fields
@@ -113,7 +113,7 @@ local character = client:character(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:character():list()
+local results, err = client:Character():list()
 ```
 
 #### `load(reqmatch, ctrl) -> any, err`
@@ -121,7 +121,7 @@ local results, err = client:character():list()
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:character():load({ id = "character_id" })
+local result, err = client:Character():load({ id = "character_id" })
 ```
 
 ### Common Methods
@@ -157,7 +157,7 @@ Return the entity name.
 ## EpisodeEntity
 
 ```lua
-local episode = client:episode(nil)
+local episode = client:Episode(nil)
 ```
 
 ### Fields
@@ -179,7 +179,7 @@ local episode = client:episode(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:episode():list()
+local results, err = client:Episode():list()
 ```
 
 #### `load(reqmatch, ctrl) -> any, err`
@@ -187,7 +187,7 @@ local results, err = client:episode():list()
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:episode():load({ id = "episode_id" })
+local result, err = client:Episode():load({ id = "episode_id" })
 ```
 
 ### Common Methods
@@ -223,7 +223,7 @@ Return the entity name.
 ## QuestionEntity
 
 ```lua
-local question = client:question(nil)
+local question = client:Question(nil)
 ```
 
 ### Fields
@@ -242,7 +242,7 @@ local question = client:question(nil)
 List entities matching the given criteria. Returns an array.
 
 ```lua
-local results, err = client:question():list()
+local results, err = client:Question():list()
 ```
 
 #### `load(reqmatch, ctrl) -> any, err`
@@ -250,7 +250,7 @@ local results, err = client:question():list()
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:question():load({ id = "question_id" })
+local result, err = client:Question():load({ id = "question_id" })
 ```
 
 ### Common Methods

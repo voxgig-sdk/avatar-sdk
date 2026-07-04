@@ -88,7 +88,7 @@ Prepare a fetch definition without sending. Returns the `fetchdef` and raises on
 ## CharacterEntity
 
 ```python
-character = client.character
+character = client.Character()
 ```
 
 ### Fields
@@ -110,7 +110,9 @@ character = client.character
 List entities matching the given criteria. Returns a list and raises on error.
 
 ```python
-results = client.character.list({})
+results = client.Character().list({})
+for character in results:
+    print(character)
 ```
 
 #### `load(reqmatch, ctrl=None) -> dict`
@@ -118,7 +120,7 @@ results = client.character.list({})
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.character.load({"id": "character_id"})
+result = client.Character().load({"id": "character_id"})
 ```
 
 ### Common Methods
@@ -153,7 +155,7 @@ Return the entity name.
 ## EpisodeEntity
 
 ```python
-episode = client.episode
+episode = client.Episode()
 ```
 
 ### Fields
@@ -175,7 +177,9 @@ episode = client.episode
 List entities matching the given criteria. Returns a list and raises on error.
 
 ```python
-results = client.episode.list({})
+results = client.Episode().list({})
+for episode in results:
+    print(episode)
 ```
 
 #### `load(reqmatch, ctrl=None) -> dict`
@@ -183,7 +187,7 @@ results = client.episode.list({})
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.episode.load({"id": "episode_id"})
+result = client.Episode().load({"id": "episode_id"})
 ```
 
 ### Common Methods
@@ -218,7 +222,7 @@ Return the entity name.
 ## QuestionEntity
 
 ```python
-question = client.question
+question = client.Question()
 ```
 
 ### Fields
@@ -237,7 +241,9 @@ question = client.question
 List entities matching the given criteria. Returns a list and raises on error.
 
 ```python
-results = client.question.list({})
+results = client.Question().list({})
+for question in results:
+    print(question)
 ```
 
 #### `load(reqmatch, ctrl=None) -> dict`
@@ -245,7 +251,7 @@ results = client.question.list({})
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.question.load({"id": "question_id"})
+result = client.Question().load({"id": "question_id"})
 ```
 
 ### Common Methods

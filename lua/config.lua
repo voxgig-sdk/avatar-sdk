@@ -351,7 +351,7 @@ local function make_config()
                 },
                 ["transform"] = {
                   ["req"] = "`reqdata`",
-                  ["res"] = "`body.question`",
+                  ["res"] = "`body`",
                 },
                 ["index$"] = 0,
               },

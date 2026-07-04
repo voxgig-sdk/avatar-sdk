@@ -31,24 +31,28 @@ from avatar_sdk import AvatarSDK
 client = AvatarSDK()
 ```
 
-### 2. List characters
+### 2. List character records
+
+`list()` returns a `list` of records (each a `dict`) and raises on
+error — iterate it directly.
 
 ```python
 try:
-    result = client.character.list()
-    for item in result:
-        d = item.data_get()
-        print(d["id"], d["name"])
+    characters = client.Character().list({})
+    for character in characters:
+        print(character)
 except Exception as err:
     print(f"list failed: {err}")
 ```
 
 ### 3. Load a character
 
+`load()` returns the bare record (a `dict`) and raises on error.
+
 ```python
 try:
-    result = client.character.load({"id": "example_id"})
-    print(result)
+    character = client.Character().load({"id": "example_id"})
+    print(character)
 except Exception as err:
     print(f"load failed: {err}")
 ```
@@ -96,8 +100,9 @@ Create a mock client for unit testing — no server required:
 ```python
 client = AvatarSDK.test()
 
-result = client.character.load({"id": "test01"})
-# result contains mock response data
+# Entity ops return the bare record and raise on error.
+character = client.Character().load({"id": "test01"})
+# character contains the mock response record
 ```
 
 ### Use a custom fetch function
@@ -174,7 +179,7 @@ Creates a test-mode client with mock transport. Both arguments may be `None`.
 | `prepare` | `(fetchargs) -> dict` | Build an HTTP request definition without sending. Raises on error. |
 | `direct` | `(fetchargs) -> dict` | Build and send an HTTP request. Returns a result dict (branch on `ok`). |
 | `Character` | `(data) -> CharacterEntity` | Create a Character entity instance. |
-| `Episode` | `(data) -> EpisodeEntity` | Create a Episode entity instance. |
+| `Episode` | `(data) -> EpisodeEntity` | Create an Episode entity instance. |
 | `Question` | `(data) -> QuestionEntity` | Create a Question entity instance. |
 
 ### Entity interface
@@ -267,7 +272,7 @@ API path: `/questions`
 
 ### Character
 
-Create an instance: `const character = client.character`
+Create an instance: `character = client.Character()`
 
 #### Operations
 
@@ -290,20 +295,20 @@ Create an instance: `const character = client.character`
 
 #### Example: Load
 
-```ts
-const character = await client.character.load({ id: 'character_id' })
+```python
+character = client.Character().load({"id": "character_id"})
 ```
 
 #### Example: List
 
-```ts
-const characters = await client.character.list()
+```python
+characters = client.Character().list({})
 ```
 
 
 ### Episode
 
-Create an instance: `const episode = client.episode`
+Create an instance: `episode = client.Episode()`
 
 #### Operations
 
@@ -326,20 +331,20 @@ Create an instance: `const episode = client.episode`
 
 #### Example: Load
 
-```ts
-const episode = await client.episode.load({ id: 'episode_id' })
+```python
+episode = client.Episode().load({"id": "episode_id"})
 ```
 
 #### Example: List
 
-```ts
-const episodes = await client.episode.list()
+```python
+episodes = client.Episode().list({})
 ```
 
 
 ### Question
 
-Create an instance: `const question = client.question`
+Create an instance: `question = client.Question()`
 
 #### Operations
 
@@ -359,14 +364,14 @@ Create an instance: `const question = client.question`
 
 #### Example: Load
 
-```ts
-const question = await client.question.load({ id: 'question_id' })
+```python
+question = client.Question().load({"id": "question_id"})
 ```
 
 #### Example: List
 
-```ts
-const questions = await client.question.list()
+```python
+questions = client.Question().list({})
 ```
 
 
@@ -440,7 +445,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```python
-character = client.character
+character = client.Character()
 character.load({"id": "example_id"})
 
 # character.data_get() now returns the loaded character data

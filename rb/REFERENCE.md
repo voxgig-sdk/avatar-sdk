@@ -94,7 +94,7 @@ same parameters as `direct()`. Raises on error.
 ## CharacterEntity
 
 ```ruby
-character = client.character
+character = client.Character
 ```
 
 ### Fields
@@ -116,7 +116,7 @@ character = client.character
 List entities matching the given criteria. Returns an array. Raises on error.
 
 ```ruby
-results = client.character.list(nil)
+results = client.Character.list(nil)
 ```
 
 #### `load(reqmatch, ctrl = nil) -> result`
@@ -124,7 +124,7 @@ results = client.character.list(nil)
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.character.load({ "id" => "character_id" })
+result = client.Character.load({ "id" => "character_id" })
 ```
 
 ### Common Methods
@@ -160,7 +160,7 @@ Return the entity name.
 ## EpisodeEntity
 
 ```ruby
-episode = client.episode
+episode = client.Episode
 ```
 
 ### Fields
@@ -182,7 +182,7 @@ episode = client.episode
 List entities matching the given criteria. Returns an array. Raises on error.
 
 ```ruby
-results = client.episode.list(nil)
+results = client.Episode.list(nil)
 ```
 
 #### `load(reqmatch, ctrl = nil) -> result`
@@ -190,7 +190,7 @@ results = client.episode.list(nil)
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.episode.load({ "id" => "episode_id" })
+result = client.Episode.load({ "id" => "episode_id" })
 ```
 
 ### Common Methods
@@ -226,7 +226,7 @@ Return the entity name.
 ## QuestionEntity
 
 ```ruby
-question = client.question
+question = client.Question
 ```
 
 ### Fields
@@ -245,7 +245,7 @@ question = client.question
 List entities matching the given criteria. Returns an array. Raises on error.
 
 ```ruby
-results = client.question.list(nil)
+results = client.Question.list(nil)
 ```
 
 #### `load(reqmatch, ctrl = nil) -> result`
@@ -253,7 +253,7 @@ results = client.question.list(nil)
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.question.load({ "id" => "question_id" })
+result = client.Question.load({ "id" => "question_id" })
 ```
 
 ### Common Methods
