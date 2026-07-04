@@ -50,16 +50,14 @@ class TestQuestionEntity:
         question_ref01_ent = client.Question(None)
         question_ref01_match = {}
 
-        question_ref01_list_result, err = question_ref01_ent.list(question_ref01_match, None)
-        assert err is None
+        question_ref01_list_result = question_ref01_ent.list(question_ref01_match, None)
         assert isinstance(question_ref01_list_result, list)
 
         # LOAD
         question_ref01_match_dt0 = {
             "id": question_ref01_data["id"],
         }
-        question_ref01_data_dt0_loaded, err = question_ref01_ent.load(question_ref01_match_dt0, None)
-        assert err is None
+        question_ref01_data_dt0_loaded = question_ref01_ent.load(question_ref01_match_dt0, None)
         question_ref01_data_dt0_load_result = helpers.to_map(question_ref01_data_dt0_loaded)
         assert question_ref01_data_dt0_load_result is not None
         assert question_ref01_data_dt0_load_result["id"] == question_ref01_data["id"]
@@ -102,7 +100,6 @@ def _question_basic_setup(extra):
         "AVATAR_TEST_QUESTION_ENTID": idmap,
         "AVATAR_TEST_LIVE": "FALSE",
         "AVATAR_TEST_EXPLAIN": "FALSE",
-        "AVATAR_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -113,7 +110,6 @@ def _question_basic_setup(extra):
     if env.get("AVATAR_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
-                "apikey": env.get("AVATAR_APIKEY"),
             },
             extra or {},
         ])

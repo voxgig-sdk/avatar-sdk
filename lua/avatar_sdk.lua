@@ -244,18 +244,57 @@ end
 
 
 
+-- Idiomatic facade: client:character():list() / client:character():load({ id = ... })
+function AvatarSDK:character(data)
+  local EntityMod = require("entity.character_entity")
+  if data == nil then
+    if self._character == nil then
+      self._character = EntityMod.new(self, nil)
+    end
+    return self._character
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:character() instead.
 function AvatarSDK:Character(data)
   local EntityMod = require("entity.character_entity")
   return EntityMod.new(self, data)
 end
 
 
+-- Idiomatic facade: client:episode():list() / client:episode():load({ id = ... })
+function AvatarSDK:episode(data)
+  local EntityMod = require("entity.episode_entity")
+  if data == nil then
+    if self._episode == nil then
+      self._episode = EntityMod.new(self, nil)
+    end
+    return self._episode
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:episode() instead.
 function AvatarSDK:Episode(data)
   local EntityMod = require("entity.episode_entity")
   return EntityMod.new(self, data)
 end
 
 
+-- Idiomatic facade: client:question():list() / client:question():load({ id = ... })
+function AvatarSDK:question(data)
+  local EntityMod = require("entity.question_entity")
+  if data == nil then
+    if self._question == nil then
+      self._question = EntityMod.new(self, nil)
+    end
+    return self._question
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:question() instead.
 function AvatarSDK:Question(data)
   local EntityMod = require("entity.question_entity")
   return EntityMod.new(self, data)

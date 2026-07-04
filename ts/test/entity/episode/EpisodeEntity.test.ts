@@ -120,7 +120,6 @@ function basicSetup(extra?: any) {
     'AVATAR_TEST_EPISODE_ENTID': idmap,
     'AVATAR_TEST_LIVE': 'FALSE',
     'AVATAR_TEST_EXPLAIN': 'FALSE',
-    'AVATAR_APIKEY': 'NONE',
   })
 
   idmap = env['AVATAR_TEST_EPISODE_ENTID']
@@ -130,7 +129,6 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new AvatarSDK(merge([
       {
-        apikey: env.AVATAR_APIKEY,
       },
       extra
     ]))

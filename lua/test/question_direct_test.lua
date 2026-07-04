@@ -117,14 +117,12 @@ function question_direct_setup(mockres)
   local env = runner.env_override({
     ["AVATAR_TEST_QUESTION_ENTID"] = {},
     ["AVATAR_TEST_LIVE"] = "FALSE",
-    ["AVATAR_APIKEY"] = "NONE",
   })
 
   local live = env["AVATAR_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {
-      apikey = env["AVATAR_APIKEY"],
     }
     local client = sdk.new(merged_opts)
     return {

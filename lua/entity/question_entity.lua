@@ -79,6 +79,10 @@ end
 
 
 
+---@param reqmatch QuestionLoadMatch
+---@param ctrl? table
+---@return Question
+---@return string? err
 function QuestionEntity:load(reqmatch, ctrl)
   local utility = self._utility
   local ctx = utility.make_context({
@@ -104,6 +108,10 @@ end
 
 
 
+---@param reqmatch QuestionListMatch
+---@param ctrl? table
+---@return Question[]
+---@return string? err
 function QuestionEntity:list(reqmatch, ctrl)
   local utility = self._utility
   local ctx = utility.make_context({

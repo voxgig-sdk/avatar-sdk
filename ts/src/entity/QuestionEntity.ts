@@ -14,9 +14,14 @@ import type {
   Control,
 } from '../types'
 
+import type {
+  Question,
+  QuestionLoadMatch,
+  QuestionListMatch,
+} from '../AvatarTypes'
 
 // TODO: needs Entity superclass
-class QuestionEntity extends AvatarEntityBase {
+class QuestionEntity extends AvatarEntityBase<Question> {
 
   constructor(client: AvatarSDK, entopts: any) {
     super(client, entopts)
@@ -32,7 +37,7 @@ class QuestionEntity extends AvatarEntityBase {
 
 
 
-  async load(this: any, reqmatch?: any, ctrl?: Control) {
+  async load(this: any, reqmatch?: QuestionLoadMatch, ctrl?: Control): Promise<Question> {
 
     const utility = this._utility
 
@@ -136,14 +141,16 @@ class QuestionEntity extends AvatarEntityBase {
         throw err
       }
       else {
-        return undefined
+        // Off-happy-path (throw disabled): typed as any so the method's
+        // Promise<Question> return stays clean under strict null checks.
+        return undefined as any
       }
     }
   }
 
 
 
-  async list(this: any, reqmatch?: any, ctrl?: Control) {
+  async list(this: any, reqmatch?: QuestionListMatch, ctrl?: Control): Promise<Question[]> {
 
     const utility = this._utility
 
@@ -243,7 +250,9 @@ class QuestionEntity extends AvatarEntityBase {
         throw err
       }
       else {
-        return undefined
+        // Off-happy-path (throw disabled): typed as any so the method's
+        // Promise<Question[]> return stays clean under strict null checks.
+        return undefined as any
       }
     }
   }

@@ -43,16 +43,14 @@ class EpisodeEntityTest < Minitest::Test
     episode_ref01_ent = client.Episode(nil)
     episode_ref01_match = {}
 
-    episode_ref01_list_result, err = episode_ref01_ent.list(episode_ref01_match, nil)
-    assert_nil err
+    episode_ref01_list_result = episode_ref01_ent.list(episode_ref01_match, nil)
     assert episode_ref01_list_result.is_a?(Array)
 
     # LOAD
     episode_ref01_match_dt0 = {
       "id" => episode_ref01_data["id"],
     }
-    episode_ref01_data_dt0_loaded, err = episode_ref01_ent.load(episode_ref01_match_dt0, nil)
-    assert_nil err
+    episode_ref01_data_dt0_loaded = episode_ref01_ent.load(episode_ref01_match_dt0, nil)
     episode_ref01_data_dt0_load_result = Helpers.to_map(episode_ref01_data_dt0_loaded)
     assert !episode_ref01_data_dt0_load_result.nil?
     assert_equal episode_ref01_data_dt0_load_result["id"], episode_ref01_data["id"]
@@ -93,7 +91,6 @@ def episode_basic_setup(extra)
     "AVATAR_TEST_EPISODE_ENTID" => idmap,
     "AVATAR_TEST_LIVE" => "FALSE",
     "AVATAR_TEST_EXPLAIN" => "FALSE",
-    "AVATAR_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -105,7 +102,6 @@ def episode_basic_setup(extra)
   if env["AVATAR_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["AVATAR_APIKEY"],
       },
       extra || {},
     ])

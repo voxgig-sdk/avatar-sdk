@@ -245,16 +245,25 @@ func (sdk *AvatarSDK) Direct(fetchargs map[string]any) (map[string]any, error) {
 }
 
 
+// Character returns a Character entity bound to this client.
+// Idiomatic usage: client.Character(nil).List(nil, nil) or
+// client.Character(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *AvatarSDK) Character(data map[string]any) AvatarEntity {
 	return NewCharacterEntityFunc(sdk, data)
 }
 
 
+// Episode returns a Episode entity bound to this client.
+// Idiomatic usage: client.Episode(nil).List(nil, nil) or
+// client.Episode(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *AvatarSDK) Episode(data map[string]any) AvatarEntity {
 	return NewEpisodeEntityFunc(sdk, data)
 }
 
 
+// Question returns a Question entity bound to this client.
+// Idiomatic usage: client.Question(nil).List(nil, nil) or
+// client.Question(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *AvatarSDK) Question(data map[string]any) AvatarEntity {
 	return NewQuestionEntityFunc(sdk, data)
 }

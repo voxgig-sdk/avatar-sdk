@@ -4,6 +4,8 @@ import { CharacterEntity } from './entity/CharacterEntity'
 import { EpisodeEntity } from './entity/EpisodeEntity'
 import { QuestionEntity } from './entity/QuestionEntity'
 
+export type * from './AvatarTypes'
+
 
 import { inspect } from 'node:util'
 
@@ -204,18 +206,42 @@ class AvatarSDK {
 
 
 
+  _character?: CharacterEntity
+
+  // Idiomatic facade: `client.character.list()` / `client.character.load({ id })`.
+  get character(): CharacterEntity {
+    return (this._character ??= new CharacterEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.character` instead. */
   Character(data?: any) {
     const self = this
     return new CharacterEntity(self,data)
   }
 
 
+  _episode?: EpisodeEntity
+
+  // Idiomatic facade: `client.episode.list()` / `client.episode.load({ id })`.
+  get episode(): EpisodeEntity {
+    return (this._episode ??= new EpisodeEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.episode` instead. */
   Episode(data?: any) {
     const self = this
     return new EpisodeEntity(self,data)
   }
 
 
+  _question?: QuestionEntity
+
+  // Idiomatic facade: `client.question.list()` / `client.question.load({ id })`.
+  get question(): QuestionEntity {
+    return (this._question ??= new QuestionEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.question` instead. */
   Question(data?: any) {
     const self = this
     return new QuestionEntity(self,data)

@@ -50,16 +50,14 @@ class QuestionEntityTest extends TestCase
         $question_ref01_ent = $client->Question(null);
         $question_ref01_match = [];
 
-        [$question_ref01_list_result, $err] = $question_ref01_ent->list($question_ref01_match, null);
-        $this->assertNull($err);
+        $question_ref01_list_result = $question_ref01_ent->list($question_ref01_match, null);
         $this->assertIsArray($question_ref01_list_result);
 
         // LOAD
         $question_ref01_match_dt0 = [
             "id" => $question_ref01_data["id"],
         ];
-        [$question_ref01_data_dt0_loaded, $err] = $question_ref01_ent->load($question_ref01_match_dt0, null);
-        $this->assertNull($err);
+        $question_ref01_data_dt0_loaded = $question_ref01_ent->load($question_ref01_match_dt0, null);
         $question_ref01_data_dt0_load_result = Helpers::to_map($question_ref01_data_dt0_loaded);
         $this->assertNotNull($question_ref01_data_dt0_load_result);
         $this->assertEquals($question_ref01_data_dt0_load_result["id"], $question_ref01_data["id"]);
@@ -96,7 +94,6 @@ function question_basic_setup($extra)
         "AVATAR_TEST_QUESTION_ENTID" => $idmap,
         "AVATAR_TEST_LIVE" => "FALSE",
         "AVATAR_TEST_EXPLAIN" => "FALSE",
-        "AVATAR_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -108,7 +105,6 @@ function question_basic_setup($extra)
     if ($env["AVATAR_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["AVATAR_APIKEY"],
             ],
             $extra ?? [],
         ]);

@@ -194,14 +194,12 @@ func questionDirectSetup(mockres any) *questionDirectSetupResult {
 	env := envOverride(map[string]any{
 		"AVATAR_TEST_QUESTION_ENTID": map[string]any{},
 		"AVATAR_TEST_LIVE":    "FALSE",
-		"AVATAR_APIKEY":       "NONE",
 	})
 
 	live := env["AVATAR_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
-			"apikey": env["AVATAR_APIKEY"],
 		}
 		client := sdk.NewAvatarSDK(mergedOpts)
 
