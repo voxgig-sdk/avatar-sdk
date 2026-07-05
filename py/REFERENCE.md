@@ -95,22 +95,22 @@ character = client.Character()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `affiliation` | ``$STRING`` | No |  |
-| `ally` | ``$ARRAY`` | No |  |
-| `enemy` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `photo_url` | ``$STRING`` | No |  |
-| `position` | ``$STRING`` | No |  |
+| `affiliation` | `str` | No |  |
+| `ally` | `list` | No |  |
+| `enemy` | `list` | No |  |
+| `id` | `int` | No |  |
+| `name` | `str` | No |  |
+| `photo_url` | `str` | No |  |
+| `position` | `str` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Character().list({})
+results = client.Character().list()
 for character in results:
     print(character)
 ```
@@ -162,22 +162,22 @@ episode = client.Episode()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `air_date` | ``$STRING`` | No |  |
-| `director` | ``$STRING`` | No |  |
-| `episode_num` | ``$INTEGER`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `season` | ``$INTEGER`` | No |  |
-| `title` | ``$STRING`` | No |  |
-| `writer` | ``$STRING`` | No |  |
+| `air_date` | `str` | No |  |
+| `director` | `str` | No |  |
+| `episode_num` | `int` | No |  |
+| `id` | `int` | No |  |
+| `season` | `int` | No |  |
+| `title` | `str` | No |  |
+| `writer` | `str` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Episode().list({})
+results = client.Episode().list()
 for episode in results:
     print(episode)
 ```
@@ -229,19 +229,19 @@ question = client.Question()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `answer` | ``$STRING`` | No |  |
-| `difficulty` | ``$STRING`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `question` | ``$STRING`` | No |  |
+| `answer` | `str` | No |  |
+| `difficulty` | `str` | No |  |
+| `id` | `int` | No |  |
+| `question` | `str` | No |  |
 
 ### Operations
 
-#### `list(reqmatch, ctrl=None) -> list`
+#### `list(reqmatch=None, ctrl=None) -> list`
 
-List entities matching the given criteria. Returns a list and raises on error.
+List entities matching the given criteria. The match is optional — call `list()` with no argument to list all records. Returns a list and raises on error.
 
 ```python
-results = client.Question().list({})
+results = client.Question().list()
 for question in results:
     print(question)
 ```

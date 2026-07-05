@@ -221,19 +221,19 @@ class AvatarSDK:
 
 
     def Character(self, data=None) -> "CharacterEntity":
-        """Entity factory: client.Character().list({}) / client.Character().load({"id": ...})."""
+        """Entity factory: client.Character().list() / client.Character().load({"id": ...})."""
         from entity.character_entity import CharacterEntity
         return CharacterEntity(self, data)
 
 
     def Episode(self, data=None) -> "EpisodeEntity":
-        """Entity factory: client.Episode().list({}) / client.Episode().load({"id": ...})."""
+        """Entity factory: client.Episode().list() / client.Episode().load({"id": ...})."""
         from entity.episode_entity import EpisodeEntity
         return EpisodeEntity(self, data)
 
 
     def Question(self, data=None) -> "QuestionEntity":
-        """Entity factory: client.Question().list({}) / client.Question().load({"id": ...})."""
+        """Entity factory: client.Question().list() / client.Question().load({"id": ...})."""
         from entity.question_entity import QuestionEntity
         return QuestionEntity(self, data)
 

@@ -140,13 +140,13 @@ const character = client.Character()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `affiliation` | ``$STRING`` | No |  |
-| `ally` | ``$ARRAY`` | No |  |
-| `enemy` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `photo_url` | ``$STRING`` | No |  |
-| `position` | ``$STRING`` | No |  |
+| `affiliation` | `string` | No |  |
+| `ally` | `any[]` | No |  |
+| `enemy` | `any[]` | No |  |
+| `id` | `number` | No |  |
+| `name` | `string` | No |  |
+| `photo_url` | `string` | No |  |
+| `position` | `string` | No |  |
 
 ### Operations
 
@@ -163,7 +163,7 @@ const results = await client.Character().list()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Character().load({ id: 'character_id' })
+const result = await client.Character().load({ id: 1 })
 ```
 
 ### Common Methods
@@ -204,13 +204,13 @@ const episode = client.Episode()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `air_date` | ``$STRING`` | No |  |
-| `director` | ``$STRING`` | No |  |
-| `episode_num` | ``$INTEGER`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `season` | ``$INTEGER`` | No |  |
-| `title` | ``$STRING`` | No |  |
-| `writer` | ``$STRING`` | No |  |
+| `air_date` | `string` | No |  |
+| `director` | `string` | No |  |
+| `episode_num` | `number` | No |  |
+| `id` | `number` | No |  |
+| `season` | `number` | No |  |
+| `title` | `string` | No |  |
+| `writer` | `string` | No |  |
 
 ### Operations
 
@@ -227,7 +227,7 @@ const results = await client.Episode().list()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Episode().load({ id: 'episode_id' })
+const result = await client.Episode().load({ id: 1 })
 ```
 
 ### Common Methods
@@ -268,10 +268,10 @@ const question = client.Question()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `answer` | ``$STRING`` | No |  |
-| `difficulty` | ``$STRING`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `question` | ``$STRING`` | No |  |
+| `answer` | `string` | No |  |
+| `difficulty` | `string` | No |  |
+| `id` | `number` | No |  |
+| `question` | `string` | No |  |
 
 ### Operations
 
@@ -288,7 +288,7 @@ const results = await client.Question().list()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Question().load({ id: 'question_id' })
+const result = await client.Question().load({ id: 1 })
 ```
 
 ### Common Methods

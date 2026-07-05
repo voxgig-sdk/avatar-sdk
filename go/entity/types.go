@@ -24,8 +24,7 @@ type CharacterLoadMatch struct {
 	Id int `json:"id"`
 }
 
-// CharacterListMatch mirrors the character fields as an all-optional match
-// filter (Go analog of Partial<Character>).
+// CharacterListMatch is the typed request payload for Character.ListTyped.
 type CharacterListMatch struct {
 	Affiliation *string `json:"affiliation,omitempty"`
 	Ally *[]any `json:"ally,omitempty"`
@@ -52,8 +51,7 @@ type EpisodeLoadMatch struct {
 	Id int `json:"id"`
 }
 
-// EpisodeListMatch mirrors the episode fields as an all-optional match
-// filter (Go analog of Partial<Episode>).
+// EpisodeListMatch is the typed request payload for Episode.ListTyped.
 type EpisodeListMatch struct {
 	AirDate *string `json:"air_date,omitempty"`
 	Director *string `json:"director,omitempty"`
@@ -77,8 +75,7 @@ type QuestionLoadMatch struct {
 	Id int `json:"id"`
 }
 
-// QuestionListMatch mirrors the question fields as an all-optional match
-// filter (Go analog of Partial<Question>).
+// QuestionListMatch is the typed request payload for Question.ListTyped.
 type QuestionListMatch struct {
 	Answer *string `json:"answer,omitempty"`
 	Difficulty *string `json:"difficulty,omitempty"`

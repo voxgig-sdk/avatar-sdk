@@ -30,7 +30,7 @@ class CharacterLoadMatch
     public int $id;
 }
 
-/** Match filter for Character#list (any subset of Character fields). */
+/** Request payload for Character#list. */
 class CharacterListMatch
 {
     public ?string $affiliation = null;
@@ -60,7 +60,7 @@ class EpisodeLoadMatch
     public int $id;
 }
 
-/** Match filter for Episode#list (any subset of Episode fields). */
+/** Request payload for Episode#list. */
 class EpisodeListMatch
 {
     public ?string $air_date = null;
@@ -87,7 +87,7 @@ class QuestionLoadMatch
     public int $id;
 }
 
-/** Match filter for Question#list (any subset of Question fields). */
+/** Request payload for Question#list. */
 class QuestionListMatch
 {
     public ?string $answer = null;

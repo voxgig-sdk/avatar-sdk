@@ -98,13 +98,13 @@ local character = client:Character(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `affiliation` | ``$STRING`` | No |  |
-| `ally` | ``$ARRAY`` | No |  |
-| `enemy` | ``$ARRAY`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `name` | ``$STRING`` | No |  |
-| `photo_url` | ``$STRING`` | No |  |
-| `position` | ``$STRING`` | No |  |
+| `affiliation` | `string` | No |  |
+| `ally` | `table` | No |  |
+| `enemy` | `table` | No |  |
+| `id` | `number` | No |  |
+| `name` | `string` | No |  |
+| `photo_url` | `string` | No |  |
+| `position` | `string` | No |  |
 
 ### Operations
 
@@ -164,13 +164,13 @@ local episode = client:Episode(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `air_date` | ``$STRING`` | No |  |
-| `director` | ``$STRING`` | No |  |
-| `episode_num` | ``$INTEGER`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `season` | ``$INTEGER`` | No |  |
-| `title` | ``$STRING`` | No |  |
-| `writer` | ``$STRING`` | No |  |
+| `air_date` | `string` | No |  |
+| `director` | `string` | No |  |
+| `episode_num` | `number` | No |  |
+| `id` | `number` | No |  |
+| `season` | `number` | No |  |
+| `title` | `string` | No |  |
+| `writer` | `string` | No |  |
 
 ### Operations
 
@@ -230,10 +230,10 @@ local question = client:Question(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `answer` | ``$STRING`` | No |  |
-| `difficulty` | ``$STRING`` | No |  |
-| `id` | ``$INTEGER`` | No |  |
-| `question` | ``$STRING`` | No |  |
+| `answer` | `string` | No |  |
+| `difficulty` | `string` | No |  |
+| `id` | `number` | No |  |
+| `question` | `string` | No |  |
 
 ### Operations
 
