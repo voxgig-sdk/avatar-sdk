@@ -99,6 +99,7 @@ same parameters as `Direct()`.
 
 ```go
 character := client.Character(nil)
+fmt.Println(character.GetName()) // "character"
 ```
 
 ### Fields
@@ -121,6 +122,10 @@ List entities matching the given criteria. Returns an array.
 
 ```go
 results, err := client.Character(nil).List(nil, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(results)
 ```
 
 #### `Load(reqmatch, ctrl map[string]any) (any, error)`
@@ -128,7 +133,11 @@ results, err := client.Character(nil).List(nil, nil)
 Load a single entity matching the given criteria.
 
 ```go
-result, err := client.Character(nil).Load(map[string]any{"id": "character_id"}, nil)
+result, err := client.Character(nil).Load(map[string]any{"id": 1}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
 ```
 
 ### Common Methods
@@ -159,6 +168,7 @@ Return the entity name.
 
 ```go
 episode := client.Episode(nil)
+fmt.Println(episode.GetName()) // "episode"
 ```
 
 ### Fields
@@ -181,6 +191,10 @@ List entities matching the given criteria. Returns an array.
 
 ```go
 results, err := client.Episode(nil).List(nil, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(results)
 ```
 
 #### `Load(reqmatch, ctrl map[string]any) (any, error)`
@@ -188,7 +202,11 @@ results, err := client.Episode(nil).List(nil, nil)
 Load a single entity matching the given criteria.
 
 ```go
-result, err := client.Episode(nil).Load(map[string]any{"id": "episode_id"}, nil)
+result, err := client.Episode(nil).Load(map[string]any{"id": 1}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
 ```
 
 ### Common Methods
@@ -219,6 +237,7 @@ Return the entity name.
 
 ```go
 question := client.Question(nil)
+fmt.Println(question.GetName()) // "question"
 ```
 
 ### Fields
@@ -238,6 +257,10 @@ List entities matching the given criteria. Returns an array.
 
 ```go
 results, err := client.Question(nil).List(nil, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(results)
 ```
 
 #### `Load(reqmatch, ctrl map[string]any) (any, error)`
@@ -245,7 +268,11 @@ results, err := client.Question(nil).List(nil, nil)
 Load a single entity matching the given criteria.
 
 ```go
-result, err := client.Question(nil).Load(map[string]any{"id": "question_id"}, nil)
+result, err := client.Question(nil).Load(map[string]any{"id": 1}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
 ```
 
 ### Common Methods

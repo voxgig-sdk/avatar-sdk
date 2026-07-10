@@ -16,9 +16,9 @@ main: {
           url: "https://api.sampleapis.com/avatar"
         }
       ]
+      summary: "If you are an Avatar fan, then this api is for you."
       title: "Avatar"
       version: "1.0.0"
+      website: "https://sampleapis.com"
     }
   }
-}
-

@@ -343,7 +343,7 @@ Create an instance: `character := client.Character(nil)`
 #### Example: Load
 
 ```go
-character, err := client.Character(nil).Load(map[string]any{"id": "character_id"}, nil)
+character, err := client.Character(nil).Load(map[string]any{"id": 1}, nil)
 if err != nil {
     panic(err)
 }
@@ -387,7 +387,7 @@ Create an instance: `episode := client.Episode(nil)`
 #### Example: Load
 
 ```go
-episode, err := client.Episode(nil).Load(map[string]any{"id": "episode_id"}, nil)
+episode, err := client.Episode(nil).Load(map[string]any{"id": 1}, nil)
 if err != nil {
     panic(err)
 }
@@ -428,7 +428,7 @@ Create an instance: `question := client.Question(nil)`
 #### Example: Load
 
 ```go
-question, err := client.Question(nil).Load(map[string]any{"id": "question_id"}, nil)
+question, err := client.Question(nil).Load(map[string]any{"id": 1}, nil)
 if err != nil {
     panic(err)
 }

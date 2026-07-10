@@ -124,7 +124,7 @@ results = client.Character.list
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.Character.load({ "id" => "character_id" })
+result = client.Character.load({ "id" => 1 })
 ```
 
 ### Common Methods
@@ -190,7 +190,7 @@ results = client.Episode.list
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.Episode.load({ "id" => "episode_id" })
+result = client.Episode.load({ "id" => 1 })
 ```
 
 ### Common Methods
@@ -253,7 +253,7 @@ results = client.Question.list
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.Question.load({ "id" => "question_id" })
+result = client.Question.load({ "id" => 1 })
 ```
 
 ### Common Methods

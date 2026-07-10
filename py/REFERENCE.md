@@ -120,7 +120,7 @@ for character in results:
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.Character().load({"id": "character_id"})
+result = client.Character().load({"id": 1})
 ```
 
 ### Common Methods
@@ -187,7 +187,7 @@ for episode in results:
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.Episode().load({"id": "episode_id"})
+result = client.Episode().load({"id": 1})
 ```
 
 ### Common Methods
@@ -251,7 +251,7 @@ for question in results:
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.Question().load({"id": "question_id"})
+result = client.Question().load({"id": 1})
 ```
 
 ### Common Methods

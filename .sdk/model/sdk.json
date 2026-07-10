@@ -6,9 +6,6 @@
     },
     "kit": {
       "config": {
-        "auth": {
-          "prefix": "Bearer"
-        },
         "docs_order": [
           "ts",
           "py",
@@ -599,14 +596,17 @@
           "url": "https://sampleapis.com"
         },
         "description": "If you are an Avatar fan, then this api is for you. Here you can find everything from Episodes to Characters to Trivia Questions and more.",
+        "meta_source": "https://www.freepublicapis.com",
         "servers": [
           {
             "description": "Production server",
             "url": "https://api.sampleapis.com/avatar"
           }
         ],
+        "summary": "If you are an Avatar fan, then this api is for you.",
         "title": "Avatar",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "website": "https://sampleapis.com"
       },
       "option": {},
       "target": {
@@ -659,6 +659,9 @@
           },
           "name": "go-cli",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
@@ -709,6 +712,9 @@
           },
           "name": "go-mcp",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
