@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- Avatar SDK exists test
 
 local sdk = require("avatar_sdk")
 
