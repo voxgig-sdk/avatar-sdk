@@ -97,7 +97,7 @@ describe("QuestionEntity", function()
     }
     local question_ref01_data_dt0_loaded, err = question_ref01_ent:load(question_ref01_match_dt0, nil)
     assert.is_nil(err)
-    local question_ref01_data_dt0_load_result = helpers.to_map(question_ref01_data_dt0_loaded)
+    local question_ref01_data_dt0_load_result = helpers.to_map(type(question_ref01_data_dt0_loaded) == 'table' and question_ref01_data_dt0_loaded.data_get and question_ref01_data_dt0_loaded:data_get() or question_ref01_data_dt0_loaded)
     assert.is_not_nil(question_ref01_data_dt0_load_result)
     assert.are.equal(question_ref01_data_dt0_load_result["id"], question_ref01_data["id"])
 

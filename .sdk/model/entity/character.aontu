@@ -11,12 +11,12 @@ main: kit: entity: character: {
       type: "`$STRING`"
     }
     {
-      name: "ally"
+      name: "allies"
       req: false
       type: "`$ARRAY`"
     }
     {
-      name: "enemy"
+      name: "enemies"
       req: false
       type: "`$ARRAY`"
     }
@@ -31,7 +31,7 @@ main: kit: entity: character: {
       type: "`$STRING`"
     }
     {
-      name: "photo_url"
+      name: "photoUrl"
       req: false
       type: "`$STRING`"
     }

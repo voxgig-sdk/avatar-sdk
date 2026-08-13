@@ -35,14 +35,14 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "ally",
+            ["name"] = "allies",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 1,
           },
           {
             ["active"] = true,
-            ["name"] = "enemy",
+            ["name"] = "enemies",
             ["req"] = false,
             ["type"] = "`$ARRAY`",
             ["index$"] = 2,
@@ -63,7 +63,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "photo_url",
+            ["name"] = "photoUrl",
             ["req"] = false,
             ["type"] = "`$STRING`",
             ["index$"] = 5,
@@ -85,6 +85,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/characters",
                 ["parts"] = {
@@ -119,6 +120,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/characters/{id}",
                 ["parts"] = {
@@ -148,7 +150,7 @@ local function make_config()
         ["fields"] = {
           {
             ["active"] = true,
-            ["name"] = "air_date",
+            ["name"] = "airDate",
             ["req"] = false,
             ["type"] = "`$STRING`",
             ["index$"] = 0,
@@ -162,7 +164,7 @@ local function make_config()
           },
           {
             ["active"] = true,
-            ["name"] = "episode_num",
+            ["name"] = "episodeNum",
             ["req"] = false,
             ["type"] = "`$INTEGER`",
             ["index$"] = 2,
@@ -205,6 +207,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/episodes",
                 ["parts"] = {
@@ -239,6 +242,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/episodes/{id}",
                 ["parts"] = {
@@ -304,6 +308,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/questions",
                 ["parts"] = {
@@ -338,6 +343,7 @@ local function make_config()
                     },
                   },
                 },
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/questions/{id}",
                 ["parts"] = {

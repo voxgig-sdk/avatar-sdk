@@ -6,9 +6,9 @@ import time
 
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from avatar_sdk.utility.voxgig_struct import voxgig_struct as vs
 from avatar_sdk import AvatarSDK
-from core import helpers
+from avatar_sdk.core import helpers
 
 _TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 from test import runner
@@ -42,7 +42,7 @@ class TestEpisodeEntity:
         assert len(seen) == 3
 
         # Inbound: streaming active -> yields each item from the feature.
-        from config import make_config
+        from avatar_sdk.config import make_config
         cfg = make_config()
         if isinstance(cfg.get("feature"), dict) and "streaming" in cfg["feature"]:
             sdk = AvatarSDK.test(
@@ -92,7 +92,7 @@ class TestEpisodeEntity:
             "id": episode_ref01_data["id"],
         }
         episode_ref01_data_dt0_loaded = episode_ref01_ent.load(episode_ref01_match_dt0, None)
-        episode_ref01_data_dt0_load_result = helpers.to_map(episode_ref01_data_dt0_loaded)
+        episode_ref01_data_dt0_load_result = helpers.to_map(runner.entity_data(episode_ref01_data_dt0_loaded))
         assert episode_ref01_data_dt0_load_result is not None
         assert episode_ref01_data_dt0_load_result["id"] == episode_ref01_data["id"]
 

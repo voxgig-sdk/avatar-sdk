@@ -3,29 +3,29 @@
     "character": {
       "CHARACTER00": {
         "affiliation": "s46",
-        "ally": [],
-        "enemy": [],
+        "allies": [],
+        "enemies": [],
         "id": "CHARACTER00",
         "name": "s4a",
-        "photo_url": "s4b",
+        "photoUrl": "s4b",
         "position": "s4c"
       },
       "CHARACTER01": {
         "affiliation": "s8c",
-        "ally": [],
-        "enemy": [],
+        "allies": [],
+        "enemies": [],
         "id": "CHARACTER01",
         "name": "s90",
-        "photo_url": "s91",
+        "photoUrl": "s91",
         "position": "s92"
       },
       "CHARACTER02": {
         "affiliation": "sd2",
-        "ally": [],
-        "enemy": [],
+        "allies": [],
+        "enemies": [],
         "id": "CHARACTER02",
         "name": "sd6",
-        "photo_url": "sd7",
+        "photoUrl": "sd7",
         "position": "sd8"
       }
     }
@@ -34,10 +34,10 @@
     "character": {
       "character_ref01": {
         "affiliation": "s118",
-        "ally": [],
-        "enemy": [],
+        "allies": [],
+        "enemies": [],
         "name": "s11c",
-        "photo_url": "s11d",
+        "photoUrl": "s11d",
         "position": "s11e"
       }
     }

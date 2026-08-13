@@ -49,7 +49,7 @@ try {
 
 ```php
 try {
-    // load() returns the bare Character record (throws on error).
+    // load() returns the ENTITY — call data_get() for the Character record (throws on error).
     $character = $client->Character()->load(["id" => 1]);
     print_r($character);
 } catch (\Throwable $err) {
@@ -140,7 +140,8 @@ $client = AvatarSDK::test([
     "entity" => ["character" => ["test01" => ["id" => "test01"]]],
 ]);
 
-// Entity ops return the bare mock record (throws on error).
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
 $character = $client->Character()->list();
 print_r($character);
 ```
@@ -242,7 +243,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -265,11 +266,11 @@ On error, `ok` is `false` and `$err` contains the error value.
 | Field | Description |
 | --- | --- |
 | `affiliation` |  |
-| `ally` |  |
-| `enemy` |  |
+| `allies` |  |
+| `enemies` |  |
 | `id` |  |
 | `name` |  |
-| `photo_url` |  |
+| `photoUrl` |  |
 | `position` |  |
 
 Operations: List, Load.
@@ -280,9 +281,9 @@ API path: `/characters`
 
 | Field | Description |
 | --- | --- |
-| `air_date` |  |
+| `airDate` |  |
 | `director` |  |
-| `episode_num` |  |
+| `episodeNum` |  |
 | `id` |  |
 | `season` |  |
 | `title` |  |
@@ -326,17 +327,17 @@ Create an instance: `$character = $client->Character();`
 | Field | Type | Description |
 | --- | --- | --- |
 | `affiliation` | `string` |  |
-| `ally` | `array` |  |
-| `enemy` | `array` |  |
+| `allies` | `array` |  |
+| `enemies` | `array` |  |
 | `id` | `int` |  |
 | `name` | `string` |  |
-| `photo_url` | `string` |  |
+| `photoUrl` | `string` |  |
 | `position` | `string` |  |
 
 #### Example: Load
 
 ```php
-// load() returns the bare Character record (throws on error).
+// load() returns the ENTITY — call data_get() for the Character record (throws on error).
 $character = $client->Character()->load(["id" => 1]);
 ```
 
@@ -363,9 +364,9 @@ Create an instance: `$episode = $client->Episode();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `air_date` | `string` |  |
+| `airDate` | `string` |  |
 | `director` | `string` |  |
-| `episode_num` | `int` |  |
+| `episodeNum` | `int` |  |
 | `id` | `int` |  |
 | `season` | `int` |  |
 | `title` | `string` |  |
@@ -374,7 +375,7 @@ Create an instance: `$episode = $client->Episode();`
 #### Example: Load
 
 ```php
-// load() returns the bare Episode record (throws on error).
+// load() returns the ENTITY — call data_get() for the Episode record (throws on error).
 $episode = $client->Episode()->load(["id" => 1]);
 ```
 
@@ -409,7 +410,7 @@ Create an instance: `$question = $client->Question();`
 #### Example: Load
 
 ```php
-// load() returns the bare Question record (throws on error).
+// load() returns the ENTITY — call data_get() for the Question record (throws on error).
 $question = $client->Question()->load(["id" => 1]);
 ```
 

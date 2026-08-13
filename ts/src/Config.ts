@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'Avatar',
   }
 
 
@@ -69,14 +69,14 @@ class Config {
         },
         {
           "active": true,
-          "name": "ally",
+          "name": "allies",
           "req": false,
           "type": "`$ARRAY`",
           "index$": 1
         },
         {
           "active": true,
-          "name": "enemy",
+          "name": "enemies",
           "req": false,
           "type": "`$ARRAY`",
           "index$": 2
@@ -97,7 +97,7 @@ class Config {
         },
         {
           "active": true,
-          "name": "photo_url",
+          "name": "photoUrl",
           "req": false,
           "type": "`$STRING`",
           "index$": 5
@@ -119,6 +119,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/characters",
               "parts": [
@@ -153,6 +154,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/characters/{id}",
               "parts": [
@@ -182,7 +184,7 @@ class Config {
       "fields": [
         {
           "active": true,
-          "name": "air_date",
+          "name": "airDate",
           "req": false,
           "type": "`$STRING`",
           "index$": 0
@@ -196,7 +198,7 @@ class Config {
         },
         {
           "active": true,
-          "name": "episode_num",
+          "name": "episodeNum",
           "req": false,
           "type": "`$INTEGER`",
           "index$": 2
@@ -239,6 +241,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/episodes",
               "parts": [
@@ -273,6 +276,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/episodes/{id}",
               "parts": [
@@ -338,6 +342,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/questions",
               "parts": [
@@ -372,6 +377,7 @@ class Config {
                   }
                 ]
               },
+              "kind": "http",
               "method": "GET",
               "orig": "/questions/{id}",
               "parts": [

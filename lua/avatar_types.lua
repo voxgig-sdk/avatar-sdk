@@ -8,11 +8,11 @@
 
 ---@class Character
 ---@field affiliation? string
----@field ally? table
----@field enemy? table
+---@field allies? table
+---@field enemies? table
 ---@field id? number
 ---@field name? string
----@field photo_url? string
+---@field photoUrl? string
 ---@field position? string
 
 ---@class CharacterLoadMatch
@@ -20,17 +20,17 @@
 
 ---@class CharacterListMatch
 ---@field affiliation? string
----@field ally? table
----@field enemy? table
+---@field allies? table
+---@field enemies? table
 ---@field id? number
 ---@field name? string
----@field photo_url? string
+---@field photoUrl? string
 ---@field position? string
 
 ---@class Episode
----@field air_date? string
+---@field airDate? string
 ---@field director? string
----@field episode_num? number
+---@field episodeNum? number
 ---@field id? number
 ---@field season? number
 ---@field title? string
@@ -40,9 +40,9 @@
 ---@field id number
 
 ---@class EpisodeListMatch
----@field air_date? string
+---@field airDate? string
 ---@field director? string
----@field episode_num? number
+---@field episodeNum? number
 ---@field id? number
 ---@field season? number
 ---@field title? string

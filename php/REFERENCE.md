@@ -101,11 +101,11 @@ $character = $client->Character();
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `affiliation` | `string` | No |  |
-| `ally` | `array` | No |  |
-| `enemy` | `array` | No |  |
+| `allies` | `array` | No |  |
+| `enemies` | `array` | No |  |
 | `id` | `int` | No |  |
 | `name` | `string` | No |  |
-| `photo_url` | `string` | No |  |
+| `photoUrl` | `string` | No |  |
 | `position` | `string` | No |  |
 
 ### Operations
@@ -166,9 +166,9 @@ $episode = $client->Episode();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `air_date` | `string` | No |  |
+| `airDate` | `string` | No |  |
 | `director` | `string` | No |  |
-| `episode_num` | `int` | No |  |
+| `episodeNum` | `int` | No |  |
 | `id` | `int` | No |  |
 | `season` | `int` | No |  |
 | `title` | `string` | No |  |

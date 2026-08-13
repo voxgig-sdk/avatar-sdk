@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from avatar_sdk.utility.voxgig_struct import voxgig_struct as vs
 from avatar_sdk import AvatarSDK
-from core import helpers
+from avatar_sdk.core import helpers
 from test import runner
 
 

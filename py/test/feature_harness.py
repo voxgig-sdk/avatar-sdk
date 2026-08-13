@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import AvatarControl
-from core.error import AvatarError
-from core.result import AvatarResult
-from core.spec import AvatarSpec
+from avatar_sdk.config import make_config
+from avatar_sdk.features import _make_feature
+from avatar_sdk.core.control import AvatarControl
+from avatar_sdk.core.error import AvatarError
+from avatar_sdk.core.result import AvatarResult
+from avatar_sdk.core.spec import AvatarSpec
 
 
 # True when this SDK was generated with the named feature.

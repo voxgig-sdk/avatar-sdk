@@ -272,11 +272,11 @@ Only `Direct()` returns a response envelope — a `map[string]any` with
 | Field | Description |
 | --- | --- |
 | `"affiliation"` |  |
-| `"ally"` |  |
-| `"enemy"` |  |
+| `"allies"` |  |
+| `"enemies"` |  |
 | `"id"` |  |
 | `"name"` |  |
-| `"photo_url"` |  |
+| `"photoUrl"` |  |
 | `"position"` |  |
 
 Operations: List, Load.
@@ -287,9 +287,9 @@ API path: `/characters`
 
 | Field | Description |
 | --- | --- |
-| `"air_date"` |  |
+| `"airDate"` |  |
 | `"director"` |  |
-| `"episode_num"` |  |
+| `"episodeNum"` |  |
 | `"id"` |  |
 | `"season"` |  |
 | `"title"` |  |
@@ -333,11 +333,11 @@ Create an instance: `character := client.Character(nil)`
 | Field | Type | Description |
 | --- | --- | --- |
 | `affiliation` | `string` |  |
-| `ally` | `[]any` |  |
-| `enemy` | `[]any` |  |
+| `allies` | `[]any` |  |
+| `enemies` | `[]any` |  |
 | `id` | `int` |  |
 | `name` | `string` |  |
-| `photo_url` | `string` |  |
+| `photoUrl` | `string` |  |
 | `position` | `string` |  |
 
 #### Example: Load
@@ -376,9 +376,9 @@ Create an instance: `episode := client.Episode(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `air_date` | `string` |  |
+| `airDate` | `string` |  |
 | `director` | `string` |  |
-| `episode_num` | `int` |  |
+| `episodeNum` | `int` |  |
 | `id` | `int` |  |
 | `season` | `int` |  |
 | `title` | `string` |  |

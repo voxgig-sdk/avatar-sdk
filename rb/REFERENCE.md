@@ -102,11 +102,11 @@ character = client.Character
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `affiliation` | `String` | No |  |
-| `ally` | `Array` | No |  |
-| `enemy` | `Array` | No |  |
+| `allies` | `Array` | No |  |
+| `enemies` | `Array` | No |  |
 | `id` | `Integer` | No |  |
 | `name` | `String` | No |  |
-| `photo_url` | `String` | No |  |
+| `photoUrl` | `String` | No |  |
 | `position` | `String` | No |  |
 
 ### Operations
@@ -167,9 +167,9 @@ episode = client.Episode
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `air_date` | `String` | No |  |
+| `airDate` | `String` | No |  |
 | `director` | `String` | No |  |
-| `episode_num` | `Integer` | No |  |
+| `episodeNum` | `Integer` | No |  |
 | `id` | `Integer` | No |  |
 | `season` | `Integer` | No |  |
 | `title` | `String` | No |  |

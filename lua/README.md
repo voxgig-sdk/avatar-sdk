@@ -244,11 +244,11 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 | Field | Description |
 | --- | --- |
 | `affiliation` |  |
-| `ally` |  |
-| `enemy` |  |
+| `allies` |  |
+| `enemies` |  |
 | `id` |  |
 | `name` |  |
-| `photo_url` |  |
+| `photoUrl` |  |
 | `position` |  |
 
 Operations: List, Load.
@@ -259,9 +259,9 @@ API path: `/characters`
 
 | Field | Description |
 | --- | --- |
-| `air_date` |  |
+| `airDate` |  |
 | `director` |  |
-| `episode_num` |  |
+| `episodeNum` |  |
 | `id` |  |
 | `season` |  |
 | `title` |  |
@@ -305,11 +305,11 @@ Create an instance: `local character = client:Character(nil)`
 | Field | Type | Description |
 | --- | --- | --- |
 | `affiliation` | `string` |  |
-| `ally` | `table` |  |
-| `enemy` | `table` |  |
+| `allies` | `table` |  |
+| `enemies` | `table` |  |
 | `id` | `number` |  |
 | `name` | `string` |  |
-| `photo_url` | `string` |  |
+| `photoUrl` | `string` |  |
 | `position` | `string` |  |
 
 #### Example: Load
@@ -340,9 +340,9 @@ Create an instance: `local episode = client:Episode(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `air_date` | `string` |  |
+| `airDate` | `string` |  |
 | `director` | `string` |  |
-| `episode_num` | `number` |  |
+| `episodeNum` | `number` |  |
 | `id` | `number` |  |
 | `season` | `number` |  |
 | `title` | `string` |  |

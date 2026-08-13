@@ -128,7 +128,7 @@ func TestCharacterEntity(t *testing.T) {
 		if err != nil {
 			t.Fatalf("load failed: %v", err)
 		}
-		characterRef01DataDt0LoadResult := core.ToMapAny(characterRef01DataDt0Loaded)
+		characterRef01DataDt0LoadResult := core.ToMapAny(entityData(characterRef01DataDt0Loaded))
 		if characterRef01DataDt0LoadResult == nil {
 			t.Fatal("expected load result to be a map")
 		}

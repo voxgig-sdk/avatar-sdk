@@ -13,10 +13,10 @@
 # @!attribute [rw] affiliation
 #   @return [String, nil]
 #
-# @!attribute [rw] ally
+# @!attribute [rw] allies
 #   @return [Array, nil]
 #
-# @!attribute [rw] enemy
+# @!attribute [rw] enemies
 #   @return [Array, nil]
 #
 # @!attribute [rw] id
@@ -25,18 +25,18 @@
 # @!attribute [rw] name
 #   @return [String, nil]
 #
-# @!attribute [rw] photo_url
+# @!attribute [rw] photoUrl
 #   @return [String, nil]
 #
 # @!attribute [rw] position
 #   @return [String, nil]
 Character = Struct.new(
   :affiliation,
-  :ally,
-  :enemy,
+  :allies,
+  :enemies,
   :id,
   :name,
-  :photo_url,
+  :photoUrl,
   :position,
   keyword_init: true
 )
@@ -55,10 +55,10 @@ CharacterLoadMatch = Struct.new(
 # @!attribute [rw] affiliation
 #   @return [String, nil]
 #
-# @!attribute [rw] ally
+# @!attribute [rw] allies
 #   @return [Array, nil]
 #
-# @!attribute [rw] enemy
+# @!attribute [rw] enemies
 #   @return [Array, nil]
 #
 # @!attribute [rw] id
@@ -67,31 +67,31 @@ CharacterLoadMatch = Struct.new(
 # @!attribute [rw] name
 #   @return [String, nil]
 #
-# @!attribute [rw] photo_url
+# @!attribute [rw] photoUrl
 #   @return [String, nil]
 #
 # @!attribute [rw] position
 #   @return [String, nil]
 CharacterListMatch = Struct.new(
   :affiliation,
-  :ally,
-  :enemy,
+  :allies,
+  :enemies,
   :id,
   :name,
-  :photo_url,
+  :photoUrl,
   :position,
   keyword_init: true
 )
 
 # Episode entity data model.
 #
-# @!attribute [rw] air_date
+# @!attribute [rw] airDate
 #   @return [String, nil]
 #
 # @!attribute [rw] director
 #   @return [String, nil]
 #
-# @!attribute [rw] episode_num
+# @!attribute [rw] episodeNum
 #   @return [Integer, nil]
 #
 # @!attribute [rw] id
@@ -106,9 +106,9 @@ CharacterListMatch = Struct.new(
 # @!attribute [rw] writer
 #   @return [String, nil]
 Episode = Struct.new(
-  :air_date,
+  :airDate,
   :director,
-  :episode_num,
+  :episodeNum,
   :id,
   :season,
   :title,
@@ -127,13 +127,13 @@ EpisodeLoadMatch = Struct.new(
 
 # Request payload for Episode#list.
 #
-# @!attribute [rw] air_date
+# @!attribute [rw] airDate
 #   @return [String, nil]
 #
 # @!attribute [rw] director
 #   @return [String, nil]
 #
-# @!attribute [rw] episode_num
+# @!attribute [rw] episodeNum
 #   @return [Integer, nil]
 #
 # @!attribute [rw] id
@@ -148,9 +148,9 @@ EpisodeLoadMatch = Struct.new(
 # @!attribute [rw] writer
 #   @return [String, nil]
 EpisodeListMatch = Struct.new(
-  :air_date,
+  :airDate,
   :director,
-  :episode_num,
+  :episodeNum,
   :id,
   :season,
   :title,

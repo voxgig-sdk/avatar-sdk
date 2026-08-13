@@ -16,11 +16,11 @@ declare(strict_types=1);
 class Character
 {
     public ?string $affiliation = null;
-    public ?array $ally = null;
-    public ?array $enemy = null;
+    public ?array $allies = null;
+    public ?array $enemies = null;
     public ?int $id = null;
     public ?string $name = null;
-    public ?string $photo_url = null;
+    public ?string $photoUrl = null;
     public ?string $position = null;
 }
 
@@ -34,20 +34,20 @@ class CharacterLoadMatch
 class CharacterListMatch
 {
     public ?string $affiliation = null;
-    public ?array $ally = null;
-    public ?array $enemy = null;
+    public ?array $allies = null;
+    public ?array $enemies = null;
     public ?int $id = null;
     public ?string $name = null;
-    public ?string $photo_url = null;
+    public ?string $photoUrl = null;
     public ?string $position = null;
 }
 
 /** Episode entity data model. */
 class Episode
 {
-    public ?string $air_date = null;
+    public ?string $airDate = null;
     public ?string $director = null;
-    public ?int $episode_num = null;
+    public ?int $episodeNum = null;
     public ?int $id = null;
     public ?int $season = null;
     public ?string $title = null;
@@ -63,9 +63,9 @@ class EpisodeLoadMatch
 /** Request payload for Episode#list. */
 class EpisodeListMatch
 {
-    public ?string $air_date = null;
+    public ?string $airDate = null;
     public ?string $director = null;
-    public ?int $episode_num = null;
+    public ?int $episodeNum = null;
     public ?int $id = null;
     public ?int $season = null;
     public ?string $title = null;

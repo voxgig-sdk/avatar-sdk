@@ -97,7 +97,7 @@ class QuestionEntityTest extends TestCase
             "id" => $question_ref01_data["id"],
         ];
         $question_ref01_data_dt0_loaded = $question_ref01_ent->load($question_ref01_match_dt0, null);
-        $question_ref01_data_dt0_load_result = Helpers::to_map($question_ref01_data_dt0_loaded);
+        $question_ref01_data_dt0_load_result = Helpers::to_map(is_object($question_ref01_data_dt0_loaded) && method_exists($question_ref01_data_dt0_loaded, 'data_get') ? $question_ref01_data_dt0_loaded->data_get() : $question_ref01_data_dt0_loaded);
         $this->assertNotNull($question_ref01_data_dt0_load_result);
         $this->assertEquals($question_ref01_data_dt0_load_result["id"], $question_ref01_data["id"]);
 

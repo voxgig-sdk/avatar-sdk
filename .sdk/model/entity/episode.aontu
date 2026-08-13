@@ -6,7 +6,7 @@ main: kit: entity: episode: {
 
   fields: [
     {
-      name: "air_date"
+      name: "airDate"
       req: false
       type: "`$STRING`"
     }
@@ -16,7 +16,7 @@ main: kit: entity: episode: {
       type: "`$STRING`"
     }
     {
-      name: "episode_num"
+      name: "episodeNum"
       req: false
       type: "`$INTEGER`"
     }

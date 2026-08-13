@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# Avatar SDK exists test
 
 import pytest
 from avatar_sdk import AvatarSDK

@@ -48,7 +48,7 @@ end
 
 ```ruby
 begin
-  # load returns the bare Character record (raises on error).
+  # load returns the ENTITY — call data_get for the Character record (raises on error).
   character = client.Character.load({ "id" => 1 })
   puts character
 rescue => err
@@ -134,7 +134,8 @@ client = AvatarSDK.test({
   "entity" => { "character" => { "test01" => { "id" => "test01" } } },
 })
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 character = client.Character.list()
 puts character
 ```
@@ -255,11 +256,11 @@ returns a result `Hash` with these keys:
 | Field | Description |
 | --- | --- |
 | `affiliation` |  |
-| `ally` |  |
-| `enemy` |  |
+| `allies` |  |
+| `enemies` |  |
 | `id` |  |
 | `name` |  |
-| `photo_url` |  |
+| `photoUrl` |  |
 | `position` |  |
 
 Operations: List, Load.
@@ -270,9 +271,9 @@ API path: `/characters`
 
 | Field | Description |
 | --- | --- |
-| `air_date` |  |
+| `airDate` |  |
 | `director` |  |
-| `episode_num` |  |
+| `episodeNum` |  |
 | `id` |  |
 | `season` |  |
 | `title` |  |
@@ -316,17 +317,17 @@ Create an instance: `character = client.Character`
 | Field | Type | Description |
 | --- | --- | --- |
 | `affiliation` | `String` |  |
-| `ally` | `Array` |  |
-| `enemy` | `Array` |  |
+| `allies` | `Array` |  |
+| `enemies` | `Array` |  |
 | `id` | `Integer` |  |
 | `name` | `String` |  |
-| `photo_url` | `String` |  |
+| `photoUrl` | `String` |  |
 | `position` | `String` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare Character record (raises on error).
+# load returns the ENTITY — call data_get for the Character record (raises on error).
 character = client.Character.load({ "id" => 1 })
 ```
 
@@ -353,9 +354,9 @@ Create an instance: `episode = client.Episode`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `air_date` | `String` |  |
+| `airDate` | `String` |  |
 | `director` | `String` |  |
-| `episode_num` | `Integer` |  |
+| `episodeNum` | `Integer` |  |
 | `id` | `Integer` |  |
 | `season` | `Integer` |  |
 | `title` | `String` |  |
@@ -364,7 +365,7 @@ Create an instance: `episode = client.Episode`
 #### Example: Load
 
 ```ruby
-# load returns the bare Episode record (raises on error).
+# load returns the ENTITY — call data_get for the Episode record (raises on error).
 episode = client.Episode.load({ "id" => 1 })
 ```
 
@@ -399,7 +400,7 @@ Create an instance: `question = client.Question`
 #### Example: Load
 
 ```ruby
-# load returns the bare Question record (raises on error).
+# load returns the ENTITY — call data_get for the Question record (raises on error).
 question = client.Question.load({ "id" => 1 })
 ```
 

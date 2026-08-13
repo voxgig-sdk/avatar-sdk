@@ -99,11 +99,11 @@ local character = client:Character(nil)
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `affiliation` | `string` | No |  |
-| `ally` | `table` | No |  |
-| `enemy` | `table` | No |  |
+| `allies` | `table` | No |  |
+| `enemies` | `table` | No |  |
 | `id` | `number` | No |  |
 | `name` | `string` | No |  |
-| `photo_url` | `string` | No |  |
+| `photoUrl` | `string` | No |  |
 | `position` | `string` | No |  |
 
 ### Operations
@@ -164,9 +164,9 @@ local episode = client:Episode(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `air_date` | `string` | No |  |
+| `airDate` | `string` | No |  |
 | `director` | `string` | No |  |
-| `episode_num` | `number` | No |  |
+| `episodeNum` | `number` | No |  |
 | `id` | `number` | No |  |
 | `season` | `number` | No |  |
 | `title` | `string` | No |  |

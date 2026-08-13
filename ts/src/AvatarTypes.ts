@@ -7,11 +7,11 @@
 
 export interface Character {
   affiliation?: string
-  ally?: any[]
-  enemy?: any[]
+  allies?: any[]
+  enemies?: any[]
   id?: number
   name?: string
-  photo_url?: string
+  photoUrl?: string
   position?: string
 }
 
@@ -21,18 +21,18 @@ export interface CharacterLoadMatch {
 
 export interface CharacterListMatch {
   affiliation?: string
-  ally?: any[]
-  enemy?: any[]
+  allies?: any[]
+  enemies?: any[]
   id?: number
   name?: string
-  photo_url?: string
+  photoUrl?: string
   position?: string
 }
 
 export interface Episode {
-  air_date?: string
+  airDate?: string
   director?: string
-  episode_num?: number
+  episodeNum?: number
   id?: number
   season?: number
   title?: string
@@ -44,9 +44,9 @@ export interface EpisodeLoadMatch {
 }
 
 export interface EpisodeListMatch {
-  air_date?: string
+  airDate?: string
   director?: string
-  episode_num?: number
+  episodeNum?: number
   id?: number
   season?: number
   title?: string

@@ -41,14 +41,14 @@ class AvatarConfig
             ],
             [
               'active' => true,
-              'name' => 'ally',
+              'name' => 'allies',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 1,
             ],
             [
               'active' => true,
-              'name' => 'enemy',
+              'name' => 'enemies',
               'req' => false,
               'type' => '`$ARRAY`',
               'index$' => 2,
@@ -69,7 +69,7 @@ class AvatarConfig
             ],
             [
               'active' => true,
-              'name' => 'photo_url',
+              'name' => 'photoUrl',
               'req' => false,
               'type' => '`$STRING`',
               'index$' => 5,
@@ -91,6 +91,7 @@ class AvatarConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/characters',
                   'parts' => [
@@ -125,6 +126,7 @@ class AvatarConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/characters/{id}',
                   'parts' => [
@@ -154,7 +156,7 @@ class AvatarConfig
           'fields' => [
             [
               'active' => true,
-              'name' => 'air_date',
+              'name' => 'airDate',
               'req' => false,
               'type' => '`$STRING`',
               'index$' => 0,
@@ -168,7 +170,7 @@ class AvatarConfig
             ],
             [
               'active' => true,
-              'name' => 'episode_num',
+              'name' => 'episodeNum',
               'req' => false,
               'type' => '`$INTEGER`',
               'index$' => 2,
@@ -211,6 +213,7 @@ class AvatarConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/episodes',
                   'parts' => [
@@ -245,6 +248,7 @@ class AvatarConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/episodes/{id}',
                   'parts' => [
@@ -310,6 +314,7 @@ class AvatarConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/questions',
                   'parts' => [
@@ -344,6 +349,7 @@ class AvatarConfig
                       ],
                     ],
                   ],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/questions/{id}',
                   'parts' => [

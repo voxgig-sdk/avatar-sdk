@@ -16,11 +16,11 @@
 import pytest
 
 from projectname_sdk import AvatarSDK
-from core.error import AvatarError
-from core.result import AvatarResult
-from core.response import AvatarResponse
-from core.spec import AvatarSpec
-from feature.base_feature import AvatarBaseFeature
+from projectname_sdk.core.error import AvatarError
+from projectname_sdk.core.result import AvatarResult
+from projectname_sdk.core.response import AvatarResponse
+from projectname_sdk.core.spec import AvatarSpec
+from projectname_sdk.feature.base_feature import AvatarBaseFeature
 
 
 def _client():

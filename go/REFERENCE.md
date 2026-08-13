@@ -107,11 +107,11 @@ fmt.Println(character.GetName()) // "character"
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
 | `affiliation` | `string` | No |  |
-| `ally` | `[]any` | No |  |
-| `enemy` | `[]any` | No |  |
+| `allies` | `[]any` | No |  |
+| `enemies` | `[]any` | No |  |
 | `id` | `int` | No |  |
 | `name` | `string` | No |  |
-| `photo_url` | `string` | No |  |
+| `photoUrl` | `string` | No |  |
 | `position` | `string` | No |  |
 
 ### Operations
@@ -175,9 +175,9 @@ fmt.Println(episode.GetName()) // "episode"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `air_date` | `string` | No |  |
+| `airDate` | `string` | No |  |
 | `director` | `string` | No |  |
-| `episode_num` | `int` | No |  |
+| `episodeNum` | `int` | No |  |
 | `id` | `int` | No |  |
 | `season` | `int` | No |  |
 | `title` | `string` | No |  |

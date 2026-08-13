@@ -35,7 +35,9 @@ const client = new AvatarSDK()
 
 ### 2. List character records
 
-`list()` resolves to an array of Character objects — iterate it directly:
+`list()` resolves to an array of Character ENTITIES — every operation
+resolves to entities, not raw records. Iterate them directly, and call
+`.data()` on one for the record it holds:
 
 ```ts
 const characters = await client.Character().list()
@@ -133,7 +135,8 @@ Create a mock client for unit testing — no server required:
 const client = AvatarSDK.test()
 
 const character = await client.Character().list()
-// character is a bare entity populated with mock response data
+// character is the entity, populated with mock response data
+// — call character.data() for the record itself
 console.log(character)
 ```
 
@@ -302,11 +305,11 @@ The `prepare()` method returns:
 | Field | Description |
 | --- | --- |
 | `affiliation` |  |
-| `ally` |  |
-| `enemy` |  |
+| `allies` |  |
+| `enemies` |  |
 | `id` |  |
 | `name` |  |
-| `photo_url` |  |
+| `photoUrl` |  |
 | `position` |  |
 
 Operations: list, load.
@@ -317,9 +320,9 @@ API path: `/characters`
 
 | Field | Description |
 | --- | --- |
-| `air_date` |  |
+| `airDate` |  |
 | `director` |  |
-| `episode_num` |  |
+| `episodeNum` |  |
 | `id` |  |
 | `season` |  |
 | `title` |  |
@@ -363,11 +366,11 @@ Create an instance: `const character = client.Character()`
 | Field | Type | Description |
 | --- | --- | --- |
 | `affiliation` | `string` |  |
-| `ally` | `any[]` |  |
-| `enemy` | `any[]` |  |
+| `allies` | `any[]` |  |
+| `enemies` | `any[]` |  |
 | `id` | `number` |  |
 | `name` | `string` |  |
-| `photo_url` | `string` |  |
+| `photoUrl` | `string` |  |
 | `position` | `string` |  |
 
 #### Example: Load
@@ -398,9 +401,9 @@ Create an instance: `const episode = client.Episode()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `air_date` | `string` |  |
+| `airDate` | `string` |  |
 | `director` | `string` |  |
-| `episode_num` | `number` |  |
+| `episodeNum` | `number` |  |
 | `id` | `number` |  |
 | `season` | `number` |  |
 | `title` | `string` |  |
