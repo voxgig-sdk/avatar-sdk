@@ -28,7 +28,7 @@ class AvatarSDK
     utility = AvatarUtility.new
     @_utility = utility
 
-    config = AvatarConfig.make_config
+    config = AvatarConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,

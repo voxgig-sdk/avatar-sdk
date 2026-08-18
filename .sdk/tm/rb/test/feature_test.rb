@@ -15,7 +15,7 @@ require_relative "../Avatar_sdk"
 module AvatarFeatureHarness
   # True when this SDK was generated with the named feature.
   def self.has_feature?(name)
-    f = AvatarConfig.make_config["feature"]
+    f = AvatarConfig.shared_config["feature"]
     f.is_a?(Hash) && !f[name].nil?
   end
 

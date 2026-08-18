@@ -40,7 +40,7 @@ class AvatarSDK
         $utility = new AvatarUtility();
         $this->_utility = $utility;
 
-        $config = AvatarConfig::make_config();
+        $config = AvatarConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

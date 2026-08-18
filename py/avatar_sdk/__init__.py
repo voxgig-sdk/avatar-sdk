@@ -23,8 +23,8 @@ class AvatarSDK:
         utility = AvatarUtility()
         self._utility = utility
 
-        from avatar_sdk.config import make_config
-        config = make_config()
+        from avatar_sdk.config import shared_config
+        config = shared_config()
 
         self._rootctx = utility.make_context({
             "client": self,
