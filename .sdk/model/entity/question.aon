@@ -1,43 +1,32 @@
-# Entity: episode
+# Entity: question
 
-main: kit: entity: episode: {
+main: kit: entity: question: {
 
   alias: field: {}
 
   fields: [
     {
-      name: "airDate"
+      name: "answer"
       req: false
+      short: "The correct answer to the trivia question"
       type: "`$STRING`"
     }
     {
-      name: "director"
+      name: "difficulty"
       req: false
+      short: "Difficulty level of the question"
       type: "`$STRING`"
-    }
-    {
-      name: "episodeNum"
-      req: false
-      type: "`$INTEGER`"
     }
     {
       name: "id"
       req: false
+      short: "Unique identifier for the trivia question"
       type: "`$INTEGER`"
     }
     {
-      name: "season"
+      name: "question"
       req: false
-      type: "`$INTEGER`"
-    }
-    {
-      name: "title"
-      req: false
-      type: "`$STRING`"
-    }
-    {
-      name: "writer"
-      req: false
+      short: "The trivia question text"
       type: "`$STRING`"
     }
   ]
@@ -47,16 +36,16 @@ main: kit: entity: episode: {
     name: "id"
   }
 
-  name: "episode"
+  name: "question"
   op: {
     list: {
       name: "list"
       points: [
         {
           method: "GET"
-          orig: "/episodes"
+          orig: "/questions"
           parts: [
-            "episodes"
+            "questions"
           ]
           transform: {
             req: "`reqdata`"
@@ -81,9 +70,9 @@ main: kit: entity: episode: {
             ]
           }
           method: "GET"
-          orig: "/episodes/{id}"
+          orig: "/questions/{id}"
           parts: [
-            "episodes"
+            "questions"
             "{id}"
           ]
           select: {

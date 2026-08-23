@@ -19,6 +19,9 @@ module AvatarConfig
     {
       "main" => {
         "name" => "Avatar",
+        "slug" => "avatar",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -43,30 +46,37 @@ module AvatarConfig
           "fields" => [
             {
               "name" => "affiliation",
+              "short" => "The character's affiliation or nation",
               "type" => "`$STRING`",
             },
             {
               "name" => "allies",
+              "short" => "List of the character's allies",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "enemies",
+              "short" => "List of the character's enemies",
               "type" => "`$ARRAY`",
             },
             {
               "name" => "id",
+              "short" => "Unique identifier for the character",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "name",
+              "short" => "Name of the character",
               "type" => "`$STRING`",
             },
             {
               "name" => "photoUrl",
+              "short" => "URL to the character's photo",
               "type" => "`$STRING`",
             },
             {
               "name" => "position",
+              "short" => "The character's role or position",
               "type" => "`$STRING`",
             },
           ],
@@ -136,30 +146,37 @@ module AvatarConfig
           "fields" => [
             {
               "name" => "airDate",
+              "short" => "Original air date of the episode",
               "type" => "`$STRING`",
             },
             {
               "name" => "director",
+              "short" => "Director of the episode",
               "type" => "`$STRING`",
             },
             {
               "name" => "episodeNum",
+              "short" => "Episode number",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "id",
+              "short" => "Unique identifier for the episode",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "season",
+              "short" => "Season number",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "title",
+              "short" => "Title of the episode",
               "type" => "`$STRING`",
             },
             {
               "name" => "writer",
+              "short" => "Writer of the episode",
               "type" => "`$STRING`",
             },
           ],
@@ -229,18 +246,22 @@ module AvatarConfig
           "fields" => [
             {
               "name" => "answer",
+              "short" => "The correct answer to the trivia question",
               "type" => "`$STRING`",
             },
             {
               "name" => "difficulty",
+              "short" => "Difficulty level of the question",
               "type" => "`$STRING`",
             },
             {
               "name" => "id",
+              "short" => "Unique identifier for the trivia question",
               "type" => "`$INTEGER`",
             },
             {
               "name" => "question",
+              "short" => "The trivia question text",
               "type" => "`$STRING`",
             },
           ],

@@ -243,13 +243,13 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `affiliation` |  |
-| `allies` |  |
-| `enemies` |  |
-| `id` |  |
-| `name` |  |
-| `photoUrl` |  |
-| `position` |  |
+| `affiliation` | The character's affiliation or nation |
+| `allies` | List of the character's allies |
+| `enemies` | List of the character's enemies |
+| `id` | Unique identifier for the character |
+| `name` | Name of the character |
+| `photoUrl` | URL to the character's photo |
+| `position` | The character's role or position |
 
 Operations: List, Load.
 
@@ -259,13 +259,13 @@ API path: `/characters`
 
 | Field | Description |
 | --- | --- |
-| `airDate` |  |
-| `director` |  |
-| `episodeNum` |  |
-| `id` |  |
-| `season` |  |
-| `title` |  |
-| `writer` |  |
+| `airDate` | Original air date of the episode |
+| `director` | Director of the episode |
+| `episodeNum` | Episode number |
+| `id` | Unique identifier for the episode |
+| `season` | Season number |
+| `title` | Title of the episode |
+| `writer` | Writer of the episode |
 
 Operations: List, Load.
 
@@ -275,10 +275,10 @@ API path: `/episodes`
 
 | Field | Description |
 | --- | --- |
-| `answer` |  |
-| `difficulty` |  |
-| `id` |  |
-| `question` |  |
+| `answer` | The correct answer to the trivia question |
+| `difficulty` | Difficulty level of the question |
+| `id` | Unique identifier for the trivia question |
+| `question` | The trivia question text |
 
 Operations: List, Load.
 
@@ -304,13 +304,13 @@ Create an instance: `local character = client:Character(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `affiliation` | `string` |  |
-| `allies` | `table` |  |
-| `enemies` | `table` |  |
-| `id` | `number` |  |
-| `name` | `string` |  |
-| `photoUrl` | `string` |  |
-| `position` | `string` |  |
+| `affiliation` | `string` | The character's affiliation or nation |
+| `allies` | `table` | List of the character's allies |
+| `enemies` | `table` | List of the character's enemies |
+| `id` | `number` | Unique identifier for the character |
+| `name` | `string` | Name of the character |
+| `photoUrl` | `string` | URL to the character's photo |
+| `position` | `string` | The character's role or position |
 
 #### Example: Load
 
@@ -340,13 +340,13 @@ Create an instance: `local episode = client:Episode(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `airDate` | `string` |  |
-| `director` | `string` |  |
-| `episodeNum` | `number` |  |
-| `id` | `number` |  |
-| `season` | `number` |  |
-| `title` | `string` |  |
-| `writer` | `string` |  |
+| `airDate` | `string` | Original air date of the episode |
+| `director` | `string` | Director of the episode |
+| `episodeNum` | `number` | Episode number |
+| `id` | `number` | Unique identifier for the episode |
+| `season` | `number` | Season number |
+| `title` | `string` | Title of the episode |
+| `writer` | `string` | Writer of the episode |
 
 #### Example: Load
 
@@ -376,10 +376,10 @@ Create an instance: `local question = client:Question(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `answer` | `string` |  |
-| `difficulty` | `string` |  |
-| `id` | `number` |  |
-| `question` | `string` |  |
+| `answer` | `string` | The correct answer to the trivia question |
+| `difficulty` | `string` | Difficulty level of the question |
+| `id` | `number` | Unique identifier for the trivia question |
+| `question` | `string` | The trivia question text |
 
 #### Example: Load
 

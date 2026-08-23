@@ -258,13 +258,13 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `affiliation` |  |
-| `allies` |  |
-| `enemies` |  |
-| `id` |  |
-| `name` |  |
-| `photoUrl` |  |
-| `position` |  |
+| `affiliation` | The character's affiliation or nation |
+| `allies` | List of the character's allies |
+| `enemies` | List of the character's enemies |
+| `id` | Unique identifier for the character |
+| `name` | Name of the character |
+| `photoUrl` | URL to the character's photo |
+| `position` | The character's role or position |
 
 Operations: List, Load.
 
@@ -274,13 +274,13 @@ API path: `/characters`
 
 | Field | Description |
 | --- | --- |
-| `airDate` |  |
-| `director` |  |
-| `episodeNum` |  |
-| `id` |  |
-| `season` |  |
-| `title` |  |
-| `writer` |  |
+| `airDate` | Original air date of the episode |
+| `director` | Director of the episode |
+| `episodeNum` | Episode number |
+| `id` | Unique identifier for the episode |
+| `season` | Season number |
+| `title` | Title of the episode |
+| `writer` | Writer of the episode |
 
 Operations: List, Load.
 
@@ -290,10 +290,10 @@ API path: `/episodes`
 
 | Field | Description |
 | --- | --- |
-| `answer` |  |
-| `difficulty` |  |
-| `id` |  |
-| `question` |  |
+| `answer` | The correct answer to the trivia question |
+| `difficulty` | Difficulty level of the question |
+| `id` | Unique identifier for the trivia question |
+| `question` | The trivia question text |
 
 Operations: List, Load.
 
@@ -319,13 +319,13 @@ Create an instance: `character = client.Character()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `affiliation` | `str` |  |
-| `allies` | `list` |  |
-| `enemies` | `list` |  |
-| `id` | `int` |  |
-| `name` | `str` |  |
-| `photoUrl` | `str` |  |
-| `position` | `str` |  |
+| `affiliation` | `str` | The character's affiliation or nation |
+| `allies` | `list` | List of the character's allies |
+| `enemies` | `list` | List of the character's enemies |
+| `id` | `int` | Unique identifier for the character |
+| `name` | `str` | Name of the character |
+| `photoUrl` | `str` | URL to the character's photo |
+| `position` | `str` | The character's role or position |
 
 #### Example: Load
 
@@ -355,13 +355,13 @@ Create an instance: `episode = client.Episode()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `airDate` | `str` |  |
-| `director` | `str` |  |
-| `episodeNum` | `int` |  |
-| `id` | `int` |  |
-| `season` | `int` |  |
-| `title` | `str` |  |
-| `writer` | `str` |  |
+| `airDate` | `str` | Original air date of the episode |
+| `director` | `str` | Director of the episode |
+| `episodeNum` | `int` | Episode number |
+| `id` | `int` | Unique identifier for the episode |
+| `season` | `int` | Season number |
+| `title` | `str` | Title of the episode |
+| `writer` | `str` | Writer of the episode |
 
 #### Example: Load
 
@@ -391,10 +391,10 @@ Create an instance: `question = client.Question()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `answer` | `str` |  |
-| `difficulty` | `str` |  |
-| `id` | `int` |  |
-| `question` | `str` |  |
+| `answer` | `str` | The correct answer to the trivia question |
+| `difficulty` | `str` | Difficulty level of the question |
+| `id` | `int` | Unique identifier for the trivia question |
+| `question` | `str` | The trivia question text |
 
 #### Example: Load
 

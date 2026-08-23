@@ -98,13 +98,13 @@ local character = client:Character(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `affiliation` | `string` | No |  |
-| `allies` | `table` | No |  |
-| `enemies` | `table` | No |  |
-| `id` | `number` | No |  |
-| `name` | `string` | No |  |
-| `photoUrl` | `string` | No |  |
-| `position` | `string` | No |  |
+| `affiliation` | `string` | No | The character's affiliation or nation |
+| `allies` | `table` | No | List of the character's allies |
+| `enemies` | `table` | No | List of the character's enemies |
+| `id` | `number` | No | Unique identifier for the character |
+| `name` | `string` | No | Name of the character |
+| `photoUrl` | `string` | No | URL to the character's photo |
+| `position` | `string` | No | The character's role or position |
 
 ### Operations
 
@@ -164,13 +164,13 @@ local episode = client:Episode(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `airDate` | `string` | No |  |
-| `director` | `string` | No |  |
-| `episodeNum` | `number` | No |  |
-| `id` | `number` | No |  |
-| `season` | `number` | No |  |
-| `title` | `string` | No |  |
-| `writer` | `string` | No |  |
+| `airDate` | `string` | No | Original air date of the episode |
+| `director` | `string` | No | Director of the episode |
+| `episodeNum` | `number` | No | Episode number |
+| `id` | `number` | No | Unique identifier for the episode |
+| `season` | `number` | No | Season number |
+| `title` | `string` | No | Title of the episode |
+| `writer` | `string` | No | Writer of the episode |
 
 ### Operations
 
@@ -230,10 +230,10 @@ local question = client:Question(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `answer` | `string` | No |  |
-| `difficulty` | `string` | No |  |
-| `id` | `number` | No |  |
-| `question` | `string` | No |  |
+| `answer` | `string` | No | The correct answer to the trivia question |
+| `difficulty` | `string` | No | Difficulty level of the question |
+| `id` | `number` | No | Unique identifier for the trivia question |
+| `question` | `string` | No | The trivia question text |
 
 ### Operations
 

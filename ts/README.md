@@ -9,7 +9,7 @@ The API is exposed as capitalised, semantic **Entities** — e.g.
 instead of raw URL paths and query parameters. This keeps the surface
 predictable and low-friction for both humans and AI agents.
 
-> Other languages, the CLI, and MCP server live alongside this one — see
+> Also generated from this model: `go`, `go-cli`, `go-mcp`, `lua`, `php`, `py`, `rb` — see
 > the [top-level README](../README.md).
 
 
@@ -304,13 +304,13 @@ The `prepare()` method returns:
 
 | Field | Description |
 | --- | --- |
-| `affiliation` |  |
-| `allies` |  |
-| `enemies` |  |
-| `id` |  |
-| `name` |  |
-| `photoUrl` |  |
-| `position` |  |
+| `affiliation` | The character's affiliation or nation |
+| `allies` | List of the character's allies |
+| `enemies` | List of the character's enemies |
+| `id` | Unique identifier for the character |
+| `name` | Name of the character |
+| `photoUrl` | URL to the character's photo |
+| `position` | The character's role or position |
 
 Operations: list, load.
 
@@ -320,13 +320,13 @@ API path: `/characters`
 
 | Field | Description |
 | --- | --- |
-| `airDate` |  |
-| `director` |  |
-| `episodeNum` |  |
-| `id` |  |
-| `season` |  |
-| `title` |  |
-| `writer` |  |
+| `airDate` | Original air date of the episode |
+| `director` | Director of the episode |
+| `episodeNum` | Episode number |
+| `id` | Unique identifier for the episode |
+| `season` | Season number |
+| `title` | Title of the episode |
+| `writer` | Writer of the episode |
 
 Operations: list, load.
 
@@ -336,10 +336,10 @@ API path: `/episodes`
 
 | Field | Description |
 | --- | --- |
-| `answer` |  |
-| `difficulty` |  |
-| `id` |  |
-| `question` |  |
+| `answer` | The correct answer to the trivia question |
+| `difficulty` | Difficulty level of the question |
+| `id` | Unique identifier for the trivia question |
+| `question` | The trivia question text |
 
 Operations: list, load.
 
@@ -365,13 +365,13 @@ Create an instance: `const character = client.Character()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `affiliation` | `string` |  |
-| `allies` | `any[]` |  |
-| `enemies` | `any[]` |  |
-| `id` | `number` |  |
-| `name` | `string` |  |
-| `photoUrl` | `string` |  |
-| `position` | `string` |  |
+| `affiliation` | `string` | The character's affiliation or nation |
+| `allies` | `any[]` | List of the character's allies |
+| `enemies` | `any[]` | List of the character's enemies |
+| `id` | `number` | Unique identifier for the character |
+| `name` | `string` | Name of the character |
+| `photoUrl` | `string` | URL to the character's photo |
+| `position` | `string` | The character's role or position |
 
 #### Example: Load
 
@@ -401,13 +401,13 @@ Create an instance: `const episode = client.Episode()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `airDate` | `string` |  |
-| `director` | `string` |  |
-| `episodeNum` | `number` |  |
-| `id` | `number` |  |
-| `season` | `number` |  |
-| `title` | `string` |  |
-| `writer` | `string` |  |
+| `airDate` | `string` | Original air date of the episode |
+| `director` | `string` | Director of the episode |
+| `episodeNum` | `number` | Episode number |
+| `id` | `number` | Unique identifier for the episode |
+| `season` | `number` | Season number |
+| `title` | `string` | Title of the episode |
+| `writer` | `string` | Writer of the episode |
 
 #### Example: Load
 
@@ -437,10 +437,10 @@ Create an instance: `const question = client.Question()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `answer` | `string` |  |
-| `difficulty` | `string` |  |
-| `id` | `number` |  |
-| `question` | `string` |  |
+| `answer` | `string` | The correct answer to the trivia question |
+| `difficulty` | `string` | Difficulty level of the question |
+| `id` | `number` | Unique identifier for the trivia question |
+| `question` | `string` | The trivia question text |
 
 #### Example: Load
 

@@ -95,13 +95,13 @@ character = client.Character()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `affiliation` | `str` | No |  |
-| `allies` | `list` | No |  |
-| `enemies` | `list` | No |  |
-| `id` | `int` | No |  |
-| `name` | `str` | No |  |
-| `photoUrl` | `str` | No |  |
-| `position` | `str` | No |  |
+| `affiliation` | `str` | No | The character's affiliation or nation |
+| `allies` | `list` | No | List of the character's allies |
+| `enemies` | `list` | No | List of the character's enemies |
+| `id` | `int` | No | Unique identifier for the character |
+| `name` | `str` | No | Name of the character |
+| `photoUrl` | `str` | No | URL to the character's photo |
+| `position` | `str` | No | The character's role or position |
 
 ### Operations
 
@@ -162,13 +162,13 @@ episode = client.Episode()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `airDate` | `str` | No |  |
-| `director` | `str` | No |  |
-| `episodeNum` | `int` | No |  |
-| `id` | `int` | No |  |
-| `season` | `int` | No |  |
-| `title` | `str` | No |  |
-| `writer` | `str` | No |  |
+| `airDate` | `str` | No | Original air date of the episode |
+| `director` | `str` | No | Director of the episode |
+| `episodeNum` | `int` | No | Episode number |
+| `id` | `int` | No | Unique identifier for the episode |
+| `season` | `int` | No | Season number |
+| `title` | `str` | No | Title of the episode |
+| `writer` | `str` | No | Writer of the episode |
 
 ### Operations
 
@@ -229,10 +229,10 @@ question = client.Question()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `answer` | `str` | No |  |
-| `difficulty` | `str` | No |  |
-| `id` | `int` | No |  |
-| `question` | `str` | No |  |
+| `answer` | `str` | No | The correct answer to the trivia question |
+| `difficulty` | `str` | No | Difficulty level of the question |
+| `id` | `int` | No | Unique identifier for the trivia question |
+| `question` | `str` | No | The trivia question text |
 
 ### Operations
 

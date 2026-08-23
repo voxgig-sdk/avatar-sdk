@@ -8,36 +8,43 @@ main: kit: entity: character: {
     {
       name: "affiliation"
       req: false
+      short: "The character's affiliation or nation"
       type: "`$STRING`"
     }
     {
       name: "allies"
       req: false
+      short: "List of the character's allies"
       type: "`$ARRAY`"
     }
     {
       name: "enemies"
       req: false
+      short: "List of the character's enemies"
       type: "`$ARRAY`"
     }
     {
       name: "id"
       req: false
+      short: "Unique identifier for the character"
       type: "`$INTEGER`"
     }
     {
       name: "name"
       req: false
+      short: "Name of the character"
       type: "`$STRING`"
     }
     {
       name: "photoUrl"
       req: false
+      short: "URL to the character's photo"
       type: "`$STRING`"
     }
     {
       name: "position"
       req: false
+      short: "The character's role or position"
       type: "`$STRING`"
     }
   ]

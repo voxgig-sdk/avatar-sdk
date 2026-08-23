@@ -101,13 +101,13 @@ character = client.Character
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `affiliation` | `String` | No |  |
-| `allies` | `Array` | No |  |
-| `enemies` | `Array` | No |  |
-| `id` | `Integer` | No |  |
-| `name` | `String` | No |  |
-| `photoUrl` | `String` | No |  |
-| `position` | `String` | No |  |
+| `affiliation` | `String` | No | The character's affiliation or nation |
+| `allies` | `Array` | No | List of the character's allies |
+| `enemies` | `Array` | No | List of the character's enemies |
+| `id` | `Integer` | No | Unique identifier for the character |
+| `name` | `String` | No | Name of the character |
+| `photoUrl` | `String` | No | URL to the character's photo |
+| `position` | `String` | No | The character's role or position |
 
 ### Operations
 
@@ -167,13 +167,13 @@ episode = client.Episode
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `airDate` | `String` | No |  |
-| `director` | `String` | No |  |
-| `episodeNum` | `Integer` | No |  |
-| `id` | `Integer` | No |  |
-| `season` | `Integer` | No |  |
-| `title` | `String` | No |  |
-| `writer` | `String` | No |  |
+| `airDate` | `String` | No | Original air date of the episode |
+| `director` | `String` | No | Director of the episode |
+| `episodeNum` | `Integer` | No | Episode number |
+| `id` | `Integer` | No | Unique identifier for the episode |
+| `season` | `Integer` | No | Season number |
+| `title` | `String` | No | Title of the episode |
+| `writer` | `String` | No | Writer of the episode |
 
 ### Operations
 
@@ -233,10 +233,10 @@ question = client.Question
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `answer` | `String` | No |  |
-| `difficulty` | `String` | No |  |
-| `id` | `Integer` | No |  |
-| `question` | `String` | No |  |
+| `answer` | `String` | No | The correct answer to the trivia question |
+| `difficulty` | `String` | No | Difficulty level of the question |
+| `id` | `Integer` | No | Unique identifier for the trivia question |
+| `question` | `String` | No | The trivia question text |
 
 ### Operations
 

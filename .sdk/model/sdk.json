@@ -36,42 +36,49 @@
               "active": true,
               "name": "affiliation",
               "req": false,
+              "short": "The character's affiliation or nation",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "allies",
               "req": false,
+              "short": "List of the character's allies",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "enemies",
               "req": false,
+              "short": "List of the character's enemies",
               "type": "`$ARRAY`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Unique identifier for the character",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "name",
               "req": false,
+              "short": "Name of the character",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "photoUrl",
               "req": false,
+              "short": "URL to the character's photo",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "position",
               "req": false,
+              "short": "The character's role or position",
               "type": "`$STRING`"
             }
           ],
@@ -154,42 +161,49 @@
               "active": true,
               "name": "airDate",
               "req": false,
+              "short": "Original air date of the episode",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "director",
               "req": false,
+              "short": "Director of the episode",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "episodeNum",
               "req": false,
+              "short": "Episode number",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Unique identifier for the episode",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "season",
               "req": false,
+              "short": "Season number",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "title",
               "req": false,
+              "short": "Title of the episode",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "writer",
               "req": false,
+              "short": "Writer of the episode",
               "type": "`$STRING`"
             }
           ],
@@ -272,24 +286,28 @@
               "active": true,
               "name": "answer",
               "req": false,
+              "short": "The correct answer to the trivia question",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "difficulty",
               "req": false,
+              "short": "Difficulty level of the question",
               "type": "`$STRING`"
             },
             {
               "active": true,
               "name": "id",
               "req": false,
+              "short": "Unique identifier for the trivia question",
               "type": "`$INTEGER`"
             },
             {
               "active": true,
               "name": "question",
               "req": false,
+              "short": "The trivia question text",
               "type": "`$STRING`"
             }
           ],

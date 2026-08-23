@@ -11,6 +11,9 @@ func MakeConfig() map[string]any {
 	return map[string]any{
 		"main": map[string]any{
 			"name": "Avatar",
+			"slug": "avatar",
+			"version": "0.0.1",
+			"target": "go",
 		},
 		"feature": map[string]any{
 			"test": map[string]any{
@@ -35,30 +38,37 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "affiliation",
+						"short": "The character's affiliation or nation",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "allies",
+						"short": "List of the character's allies",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "enemies",
+						"short": "List of the character's enemies",
 						"type": "`$ARRAY`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the character",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "name",
+						"short": "Name of the character",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "photoUrl",
+						"short": "URL to the character's photo",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "position",
+						"short": "The character's role or position",
 						"type": "`$STRING`",
 					},
 				},
@@ -128,30 +138,37 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "airDate",
+						"short": "Original air date of the episode",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "director",
+						"short": "Director of the episode",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "episodeNum",
+						"short": "Episode number",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the episode",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "season",
+						"short": "Season number",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "title",
+						"short": "Title of the episode",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "writer",
+						"short": "Writer of the episode",
 						"type": "`$STRING`",
 					},
 				},
@@ -221,18 +238,22 @@ func MakeConfig() map[string]any {
 				"fields": []any{
 					map[string]any{
 						"name": "answer",
+						"short": "The correct answer to the trivia question",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "difficulty",
+						"short": "Difficulty level of the question",
 						"type": "`$STRING`",
 					},
 					map[string]any{
 						"name": "id",
+						"short": "Unique identifier for the trivia question",
 						"type": "`$INTEGER`",
 					},
 					map[string]any{
 						"name": "question",
+						"short": "The trivia question text",
 						"type": "`$STRING`",
 					},
 				},

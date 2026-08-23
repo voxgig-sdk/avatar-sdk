@@ -106,13 +106,13 @@ fmt.Println(character.GetName()) // "character"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `affiliation` | `string` | No |  |
-| `allies` | `[]any` | No |  |
-| `enemies` | `[]any` | No |  |
-| `id` | `int` | No |  |
-| `name` | `string` | No |  |
-| `photoUrl` | `string` | No |  |
-| `position` | `string` | No |  |
+| `affiliation` | `string` | No | The character's affiliation or nation |
+| `allies` | `[]any` | No | List of the character's allies |
+| `enemies` | `[]any` | No | List of the character's enemies |
+| `id` | `int` | No | Unique identifier for the character |
+| `name` | `string` | No | Name of the character |
+| `photoUrl` | `string` | No | URL to the character's photo |
+| `position` | `string` | No | The character's role or position |
 
 ### Operations
 
@@ -175,13 +175,13 @@ fmt.Println(episode.GetName()) // "episode"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `airDate` | `string` | No |  |
-| `director` | `string` | No |  |
-| `episodeNum` | `int` | No |  |
-| `id` | `int` | No |  |
-| `season` | `int` | No |  |
-| `title` | `string` | No |  |
-| `writer` | `string` | No |  |
+| `airDate` | `string` | No | Original air date of the episode |
+| `director` | `string` | No | Director of the episode |
+| `episodeNum` | `int` | No | Episode number |
+| `id` | `int` | No | Unique identifier for the episode |
+| `season` | `int` | No | Season number |
+| `title` | `string` | No | Title of the episode |
+| `writer` | `string` | No | Writer of the episode |
 
 ### Operations
 
@@ -244,10 +244,10 @@ fmt.Println(question.GetName()) // "question"
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `answer` | `string` | No |  |
-| `difficulty` | `string` | No |  |
-| `id` | `int` | No |  |
-| `question` | `string` | No |  |
+| `answer` | `string` | No | The correct answer to the trivia question |
+| `difficulty` | `string` | No | Difficulty level of the question |
+| `id` | `int` | No | Unique identifier for the trivia question |
+| `question` | `string` | No | The trivia question text |
 
 ### Operations
 
