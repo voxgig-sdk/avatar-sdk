@@ -36,6 +36,7 @@ main: kit: entity: character: {
       type: "`$STRING`"
     }
     {
+      format: "uri"
       name: "photoUrl"
       req: false
       short: "URL to the character's photo"
@@ -62,8 +63,10 @@ main: kit: entity: character: {
         {
           method: "GET"
           orig: "/characters"
-          parts: [
-            "characters"
+          segments: [
+            {
+              lit: "characters"
+            }
           ]
           transform: {
             req: "`reqdata`"
@@ -89,9 +92,13 @@ main: kit: entity: character: {
           }
           method: "GET"
           orig: "/characters/{id}"
-          parts: [
-            "characters"
-            "{id}"
+          segments: [
+            {
+              lit: "characters"
+            }
+            {
+              var: "id"
+            }
           ]
           select: {
             exist: [

@@ -85,6 +85,7 @@ class AvatarConfig
               'type' => '`$STRING`',
             ],
             [
+              'format' => 'uri',
               'name' => 'photoUrl',
               'short' => 'URL to the character\'s photo',
               'type' => '`$STRING`',
@@ -94,6 +95,10 @@ class AvatarConfig
               'short' => 'The character\'s role or position',
               'type' => '`$STRING`',
             ],
+          ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
           ],
           'name' => 'character',
           'op' => [
@@ -106,13 +111,18 @@ class AvatarConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/characters',
-                  'parts' => [
-                    'characters',
+                  'segments' => [
+                    [
+                      'lit' => 'characters',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'characters',
                   ],
                 ],
               ],
@@ -136,9 +146,13 @@ class AvatarConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/characters/{id}',
-                  'parts' => [
-                    'characters',
-                    '{id}',
+                  'segments' => [
+                    [
+                      'lit' => 'characters',
+                    ],
+                    [
+                      'var' => 'id',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -148,6 +162,10 @@ class AvatarConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'characters',
+                    '{id}',
                   ],
                 ],
               ],
@@ -195,6 +213,10 @@ class AvatarConfig
               'type' => '`$STRING`',
             ],
           ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
+          ],
           'name' => 'episode',
           'op' => [
             'list' => [
@@ -206,13 +228,18 @@ class AvatarConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/episodes',
-                  'parts' => [
-                    'episodes',
+                  'segments' => [
+                    [
+                      'lit' => 'episodes',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'episodes',
                   ],
                 ],
               ],
@@ -236,9 +263,13 @@ class AvatarConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/episodes/{id}',
-                  'parts' => [
-                    'episodes',
-                    '{id}',
+                  'segments' => [
+                    [
+                      'lit' => 'episodes',
+                    ],
+                    [
+                      'var' => 'id',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -248,6 +279,10 @@ class AvatarConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'episodes',
+                    '{id}',
                   ],
                 ],
               ],
@@ -280,6 +315,10 @@ class AvatarConfig
               'type' => '`$STRING`',
             ],
           ],
+          'id' => [
+            'field' => 'id',
+            'name' => 'id',
+          ],
           'name' => 'question',
           'op' => [
             'list' => [
@@ -291,13 +330,18 @@ class AvatarConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/questions',
-                  'parts' => [
-                    'questions',
+                  'segments' => [
+                    [
+                      'lit' => 'questions',
+                    ],
                   ],
                   'select' => [],
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'questions',
                   ],
                 ],
               ],
@@ -321,9 +365,13 @@ class AvatarConfig
                   'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/questions/{id}',
-                  'parts' => [
-                    'questions',
-                    '{id}',
+                  'segments' => [
+                    [
+                      'lit' => 'questions',
+                    ],
+                    [
+                      'var' => 'id',
+                    ],
                   ],
                   'select' => [
                     'exist' => [
@@ -333,6 +381,10 @@ class AvatarConfig
                   'transform' => [
                     'req' => '`reqdata`',
                     'res' => '`body`',
+                  ],
+                  'parts' => [
+                    'questions',
+                    '{id}',
                   ],
                 ],
               ],

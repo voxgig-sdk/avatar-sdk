@@ -71,6 +71,7 @@ module AvatarConfig
               "type" => "`$STRING`",
             },
             {
+              "format" => "uri",
               "name" => "photoUrl",
               "short" => "URL to the character's photo",
               "type" => "`$STRING`",
@@ -81,6 +82,10 @@ module AvatarConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "character",
           "op" => {
             "list" => {
@@ -92,14 +97,19 @@ module AvatarConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/characters",
-                  "parts" => [
-                    "characters",
+                  "segments" => [
+                    {
+                      "lit" => "characters",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "characters",
+                  ],
                 },
               ],
             },
@@ -122,9 +132,13 @@ module AvatarConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/characters/{id}",
-                  "parts" => [
-                    "characters",
-                    "{id}",
+                  "segments" => [
+                    {
+                      "lit" => "characters",
+                    },
+                    {
+                      "var" => "id",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -135,6 +149,10 @@ module AvatarConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "characters",
+                    "{id}",
+                  ],
                 },
               ],
             },
@@ -181,6 +199,10 @@ module AvatarConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "episode",
           "op" => {
             "list" => {
@@ -192,14 +214,19 @@ module AvatarConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/episodes",
-                  "parts" => [
-                    "episodes",
+                  "segments" => [
+                    {
+                      "lit" => "episodes",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "episodes",
+                  ],
                 },
               ],
             },
@@ -222,9 +249,13 @@ module AvatarConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/episodes/{id}",
-                  "parts" => [
-                    "episodes",
-                    "{id}",
+                  "segments" => [
+                    {
+                      "lit" => "episodes",
+                    },
+                    {
+                      "var" => "id",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -235,6 +266,10 @@ module AvatarConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "episodes",
+                    "{id}",
+                  ],
                 },
               ],
             },
@@ -266,6 +301,10 @@ module AvatarConfig
               "type" => "`$STRING`",
             },
           ],
+          "id" => {
+            "field" => "id",
+            "name" => "id",
+          },
           "name" => "question",
           "op" => {
             "list" => {
@@ -277,14 +316,19 @@ module AvatarConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/questions",
-                  "parts" => [
-                    "questions",
+                  "segments" => [
+                    {
+                      "lit" => "questions",
+                    },
                   ],
                   "select" => {},
                   "transform" => {
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "questions",
+                  ],
                 },
               ],
             },
@@ -307,9 +351,13 @@ module AvatarConfig
                   "kind" => "http",
                   "method" => "GET",
                   "orig" => "/questions/{id}",
-                  "parts" => [
-                    "questions",
-                    "{id}",
+                  "segments" => [
+                    {
+                      "lit" => "questions",
+                    },
+                    {
+                      "var" => "id",
+                    },
                   ],
                   "select" => {
                     "exist" => [
@@ -320,6 +368,10 @@ module AvatarConfig
                     "req" => "`reqdata`",
                     "res" => "`body`",
                   },
+                  "parts" => [
+                    "questions",
+                    "{id}",
+                  ],
                 },
               ],
             },

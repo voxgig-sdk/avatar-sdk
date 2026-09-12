@@ -44,8 +44,10 @@ main: kit: entity: question: {
         {
           method: "GET"
           orig: "/questions"
-          parts: [
-            "questions"
+          segments: [
+            {
+              lit: "questions"
+            }
           ]
           transform: {
             req: "`reqdata`"
@@ -71,9 +73,13 @@ main: kit: entity: question: {
           }
           method: "GET"
           orig: "/questions/{id}"
-          parts: [
-            "questions"
-            "{id}"
+          segments: [
+            {
+              lit: "questions"
+            }
+            {
+              var: "id"
+            }
           ]
           select: {
             exist: [
