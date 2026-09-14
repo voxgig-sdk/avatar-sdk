@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { AvatarSDK } from '@voxgig-sdk/avatar'
+import { AvatarSDK } from '@voxgig-sdk/avatar-sdk'
 
 const client = new AvatarSDK()
 ```
@@ -537,7 +537,7 @@ avatar/
 Import the SDK from the package root:
 
 ```ts
-import { AvatarSDK } from '@voxgig-sdk/avatar'
+import { AvatarSDK } from '@voxgig-sdk/avatar-sdk'
 ```
 
 ### Entity state

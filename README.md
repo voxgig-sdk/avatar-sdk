@@ -105,7 +105,7 @@ local results, err = client:Character():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
+| TypeScript | `@voxgig-sdk/avatar-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
 | Python | `voxgig-sdk-avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
 | PHP | `voxgig-sdk/avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/avatar-sdk/go` | `go get github.com/voxgig-sdk/avatar-sdk/go@latest` |
@@ -119,7 +119,7 @@ local results, err = client:Character():list()
 ### TypeScript
 
 ```ts
-import { AvatarSDK } from '@voxgig-sdk/avatar'
+import { AvatarSDK } from '@voxgig-sdk/avatar-sdk'
 
 const client = new AvatarSDK()
 
