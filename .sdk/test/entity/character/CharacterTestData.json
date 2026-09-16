@@ -41,5 +41,145 @@
         "position": "s11e"
       }
     }
+  },
+  "requests": {
+    "GET /characters": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getCharacters",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "affiliation": {
+                        "description": "The character's affiliation or nation",
+                        "type": "string"
+                      },
+                      "allies": {
+                        "description": "List of the character's allies",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "enemies": {
+                        "description": "List of the character's enemies",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "id": {
+                        "description": "Unique identifier for the character",
+                        "type": "integer"
+                      },
+                      "name": {
+                        "description": "Name of the character",
+                        "type": "string"
+                      },
+                      "photoUrl": {
+                        "description": "URL to the character's photo",
+                        "format": "uri",
+                        "type": "string"
+                      },
+                      "position": {
+                        "description": "The character's role or position",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful response with list of characters"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    },
+    "GET /characters/{id}": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getCharacterById",
+        "parameters": [
+          {
+            "description": "The unique identifier of the character",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "affiliation": {
+                      "description": "The character's affiliation or nation",
+                      "type": "string"
+                    },
+                    "allies": {
+                      "description": "List of the character's allies",
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "enemies": {
+                      "description": "List of the character's enemies",
+                      "items": {
+                        "type": "string"
+                      },
+                      "type": "array"
+                    },
+                    "id": {
+                      "description": "Unique identifier for the character",
+                      "type": "integer"
+                    },
+                    "name": {
+                      "description": "Name of the character",
+                      "type": "string"
+                    },
+                    "photoUrl": {
+                      "description": "URL to the character's photo",
+                      "format": "uri",
+                      "type": "string"
+                    },
+                    "position": {
+                      "description": "The character's role or position",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with character details"
+          },
+          "404": {
+            "description": "Character not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }

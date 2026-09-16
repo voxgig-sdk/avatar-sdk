@@ -4,27 +4,27 @@
       "EPISODE00": {
         "airDate": "s46",
         "director": "s47",
-        "episodeNum": "s48",
+        "episodeNum": 72,
         "id": "EPISODE00",
-        "season": "s4a",
+        "season": 74,
         "title": "s4b",
         "writer": "s4c"
       },
       "EPISODE01": {
         "airDate": "s8c",
         "director": "s8d",
-        "episodeNum": "s8e",
+        "episodeNum": 142,
         "id": "EPISODE01",
-        "season": "s90",
+        "season": 144,
         "title": "s91",
         "writer": "s92"
       },
       "EPISODE02": {
         "airDate": "sd2",
         "director": "sd3",
-        "episodeNum": "sd4",
+        "episodeNum": 212,
         "id": "EPISODE02",
-        "season": "sd6",
+        "season": 214,
         "title": "sd7",
         "writer": "sd8"
       }
@@ -35,10 +35,136 @@
       "episode_ref01": {
         "airDate": "s118",
         "director": "s119",
-        "episodeNum": "s11a",
-        "season": "s11c",
+        "episodeNum": 282,
+        "season": 284,
         "title": "s11d",
         "writer": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "GET /episodes": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getEpisodes",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "airDate": {
+                        "description": "Original air date of the episode",
+                        "type": "string"
+                      },
+                      "director": {
+                        "description": "Director of the episode",
+                        "type": "string"
+                      },
+                      "episodeNum": {
+                        "description": "Episode number",
+                        "type": "integer"
+                      },
+                      "id": {
+                        "description": "Unique identifier for the episode",
+                        "type": "integer"
+                      },
+                      "season": {
+                        "description": "Season number",
+                        "type": "integer"
+                      },
+                      "title": {
+                        "description": "Title of the episode",
+                        "type": "string"
+                      },
+                      "writer": {
+                        "description": "Writer of the episode",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful response with list of episodes"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    },
+    "GET /episodes/{id}": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getEpisodeById",
+        "parameters": [
+          {
+            "description": "The unique identifier of the episode",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "airDate": {
+                      "description": "Original air date of the episode",
+                      "type": "string"
+                    },
+                    "director": {
+                      "description": "Director of the episode",
+                      "type": "string"
+                    },
+                    "episodeNum": {
+                      "description": "Episode number",
+                      "type": "integer"
+                    },
+                    "id": {
+                      "description": "Unique identifier for the episode",
+                      "type": "integer"
+                    },
+                    "season": {
+                      "description": "Season number",
+                      "type": "integer"
+                    },
+                    "title": {
+                      "description": "Title of the episode",
+                      "type": "string"
+                    },
+                    "writer": {
+                      "description": "Writer of the episode",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with episode details"
+          },
+          "404": {
+            "description": "Episode not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
       }
     }
   }

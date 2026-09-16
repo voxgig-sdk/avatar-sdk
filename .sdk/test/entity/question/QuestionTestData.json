@@ -29,5 +29,107 @@
         "question": "sa3"
       }
     }
+  },
+  "requests": {
+    "GET /questions": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getTriviaQuestions",
+        "parameters": [],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "properties": {
+                      "answer": {
+                        "description": "The correct answer to the trivia question",
+                        "type": "string"
+                      },
+                      "difficulty": {
+                        "description": "Difficulty level of the question",
+                        "type": "string"
+                      },
+                      "id": {
+                        "description": "Unique identifier for the trivia question",
+                        "type": "integer"
+                      },
+                      "question": {
+                        "description": "The trivia question text",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              }
+            },
+            "description": "Successful response with list of trivia questions"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    },
+    "GET /questions/{id}": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getTriviaQuestionById",
+        "parameters": [
+          {
+            "description": "The unique identifier of the trivia question",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "answer": {
+                      "description": "The correct answer to the trivia question",
+                      "type": "string"
+                    },
+                    "difficulty": {
+                      "description": "Difficulty level of the question",
+                      "type": "string"
+                    },
+                    "id": {
+                      "description": "Unique identifier for the trivia question",
+                      "type": "integer"
+                    },
+                    "question": {
+                      "description": "The trivia question text",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Successful response with trivia question details"
+          },
+          "404": {
+            "description": "Question not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
+      }
+    }
   }
 }

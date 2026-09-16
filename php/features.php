@@ -4,7 +4,10 @@ declare(strict_types=1);
 // Avatar SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class AvatarFeatures
@@ -14,8 +17,14 @@ class AvatarFeatures
         switch ($name) {
             case "base":
                 return new AvatarBaseFeature();
+            case "ratelimit":
+                return new AvatarRatelimitFeature();
+            case "retry":
+                return new AvatarRetryFeature();
             case "test":
                 return new AvatarTestFeature();
+            case "timeout":
+                return new AvatarTimeoutFeature();
             default:
                 return new AvatarBaseFeature();
         }
@@ -31,7 +40,10 @@ class AvatarFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

@@ -1,12 +1,18 @@
 # Avatar SDK feature factory
 
 from avatar_sdk.feature.base_feature import AvatarBaseFeature
+from avatar_sdk.feature.ratelimit_feature import AvatarRatelimitFeature
+from avatar_sdk.feature.retry_feature import AvatarRetryFeature
 from avatar_sdk.feature.test_feature import AvatarTestFeature
+from avatar_sdk.feature.timeout_feature import AvatarTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: AvatarBaseFeature(),
+    "ratelimit": lambda: AvatarRatelimitFeature(),
+    "retry": lambda: AvatarRetryFeature(),
     "test": lambda: AvatarTestFeature(),
+    "timeout": lambda: AvatarTimeoutFeature(),
 }
 
 
