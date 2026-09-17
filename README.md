@@ -105,12 +105,12 @@ local results, err = client:Character():list()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/avatar-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
-| Python | `voxgig-sdk-avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
-| PHP | `voxgig-sdk/avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
+| TypeScript | `@voxgig-sdk/avatar-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/tags) |
+| Python | `voxgig-sdk-avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/tags) |
+| PHP | `voxgig-sdk/avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/avatar-sdk/go` | `go get github.com/voxgig-sdk/avatar-sdk/go@latest` |
-| Ruby | `voxgig-sdk-avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
-| Lua | `voxgig-sdk-avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/releases) |
+| Ruby | `voxgig-sdk-avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/tags) |
+| Lua | `voxgig-sdk-avatar` | publish pending — [install from git tag](https://github.com/voxgig-sdk/avatar-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/avatar-sdk/go-cli` | `go install github.com/voxgig-sdk/avatar-sdk/go-cli/cmd/avatar@latest` |
 | Go MCP server | `github.com/voxgig-sdk/avatar-sdk/go-mcp` | `go get github.com/voxgig-sdk/avatar-sdk/go-mcp@latest` |
 
